@@ -1,26 +1,35 @@
 # Hero Carousel Images Setup
 
+## ⚠️ IMPORTANT: Images are BACKGROUNDS ONLY
+
+The carousel uses a **two-layer structure**:
+1. **Images** = Pure backgrounds (NO text, NO buttons)
+2. **Overlay** = Coded HTML/CSS (text and buttons)
+
 ## Required Images
 
 The carousel is configured to display 3 slides. Please add the following images to this directory:
 
 ### 1. hero-C1.png
-- **Primary hero image**
+- **Primary hero image - BACKGROUND ONLY**
 - Recommended size: 1920x600px (or 16:5 aspect ratio)
-- Shows the main FairPrice gift card offering
-- Example content: Shoppers in store with gift cards
+- Content: Shoppers in store with gift cards, store background
+- **DO NOT include**: Text overlays, button graphics, blue box
+- **Pure photography only**
 
 ### 2. hero-C2.png
-- **Secondary hero image**
+- **Secondary hero image - BACKGROUND ONLY**
 - Recommended size: 1920x600px (or 16:5 aspect ratio)
-- Could showcase corporate gifting solutions
-- Example content: Business professionals with gift cards
+- Content: Business professionals, corporate setting
+- **DO NOT include**: Text overlays, button graphics, blue box
+- **Pure photography only**
 
 ### 3. hero-C3.png
-- **Tertiary hero image**
+- **Tertiary hero image - BACKGROUND ONLY**
 - Recommended size: 1920x600px (or 16:5 aspect ratio)
-- Could showcase various occasions
-- Example content: Gift cards for different celebrations
+- Content: Various occasions, celebration scenes
+- **DO NOT include**: Text overlays, button graphics, blue box
+- **Pure photography only**
 
 ## Image Requirements
 

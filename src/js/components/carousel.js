@@ -26,33 +26,46 @@ export class HeroCarousel {
   render() {
     const carouselHTML = `
       <div class="hero-carousel-wrapper relative">
+        <!-- Background Image Slides (Images Only) -->
         <div class="hero-carousel-slides relative overflow-hidden">
           ${this.slides.map((slide, index) => this.renderSlide(slide, index)).join("")}
         </div>
         
-        <!-- Overlay Content -->
-        <div class="hero-overlay absolute inset-0 flex items-end lg:items-center">
-          <div class="hero-content w-full lg:w-2/5 lg:ml-auto bg-brand/95 backdrop-blur-sm p-6 text-white md:p-10 lg:m-8 lg:rounded-2xl">
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">
-              FairPrice Gift Cards
-            </p>
-            <h1 class="mt-3 text-3xl font-bold leading-tight md:text-4xl">
-              Everyday gifting, made a little better
-            </h1>
-            <p class="mt-4 text-sm leading-6 text-white/90 md:text-base">
-              For anyone who deserves a little cheer, from colleagues to clients or friends. Pick a design, choose a value, and make someone's day today.
-            </p>
-            <div class="mt-6 flex flex-wrap gap-3">
-              <button
-                class="bg-white px-6 py-3 text-sm font-semibold text-brand transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
-              >
-                Send Personal eGift
-              </button>
-              <button
-                class="border-2 border-white/80 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
-              >
-                Corporate Gifting
-              </button>
+        <!-- Coded Overlay Content (NOT an image) -->
+        <div class="hero-overlay absolute inset-0 flex items-end lg:items-center pointer-events-none">
+          <div class="hero-content-box w-full lg:w-auto lg:max-w-[500px] lg:ml-auto pointer-events-auto">
+            <div class="hero-content-inner bg-brand p-6 text-white md:p-10 lg:m-8 lg:rounded-2xl shadow-2xl">
+              <!-- Eyebrow Text -->
+              <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/70 md:text-sm">
+                FairPrice Gift Cards
+              </p>
+              
+              <!-- Main Heading -->
+              <h1 class="mt-3 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-[2.75rem]">
+                Everyday gifting,<br />made a little better
+              </h1>
+              
+              <!-- Description -->
+              <p class="mt-4 text-sm leading-relaxed text-white/90 md:text-base">
+                For anyone who deserves a little cheer, from colleagues to clients or friends. 
+                Pick a design, choose a value, and make someone's day today.
+              </p>
+              
+              <!-- CTA Buttons -->
+              <div class="mt-6 flex flex-wrap gap-3">
+                <button
+                  class="bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                  onclick="window.location.href='#egift'"
+                >
+                  Send Personal eGift
+                </button>
+                <button
+                  class="border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                  onclick="window.location.href='#corporate-cards'"
+                >
+                  Corporate Gifting
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -73,11 +86,15 @@ export class HeroCarousel {
       <div 
         class="hero-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"}"
         data-slide-index="${index}"
+        role="img"
+        aria-label="${slide.alt || `Hero slide ${index + 1}`}"
       >
+        <!-- Background Image Only (No overlay text in image) -->
         <img 
           src="${slide.image}" 
-          alt="${slide.alt || `Hero slide ${index + 1}`}"
-          class="w-full h-full object-cover"
+          alt=""
+          class="w-full h-full object-cover select-none"
+          draggable="false"
         />
       </div>
     `;
