@@ -9,6 +9,7 @@ import {
   renderStepTabs,
 } from "./components/renderers.js";
 import { initTabs } from "./components/tabs.js";
+import { HeroCarousel } from "./components/carousel.js";
 import { landingContent } from "./data/content.js";
 
 function setCurrentYear() {
@@ -19,7 +20,38 @@ function setCurrentYear() {
   }
 }
 
+function initHeroCarousel() {
+  const carouselContainer = document.querySelector("#hero-carousel");
+  
+  if (!carouselContainer) return;
+
+  // Define carousel slides
+  const slides = [
+    {
+      image: "./src/assets/images/hero-C1.png",
+      alt: "FairPrice Gift Cards - Everyday gifting made better",
+    },
+    // Add more slides as needed when more hero images are available
+    // {
+    //   image: "./src/assets/images/hero-C2.png",
+    //   alt: "FairPrice Gift Cards - Corporate Gifting",
+    // },
+  ];
+
+  // Initialize carousel with 6-second autoplay (based on e-commerce market research)
+  const carousel = new HeroCarousel(carouselContainer, {
+    slides: slides,
+    autoplayDelay: 6000, // 6 seconds
+  });
+
+  return carousel;
+}
+
 function initLandingPage() {
+  // Initialize hero carousel
+  initHeroCarousel();
+  
+  // Initialize other components
   renderBenefits(document.querySelector("#benefits-grid"), landingContent.benefits);
   renderOccasionTabs(document.querySelector("#occasion-tabs"), landingContent.occasions);
   renderDeliveryCards(document.querySelector("#delivery-cards"), landingContent.deliveryCards);
