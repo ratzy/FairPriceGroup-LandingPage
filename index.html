@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FairPrice Gift Cards Landing</title>
+    <title>FairPrice Gift Cards - Everyday gifting, made a little better</title>
     <meta
       name="description"
-      content="Gift practical moments with FairPrice eGift and physical gift cards."
+      content="Gift practical moments with FairPrice eGift and physical gift cards. Perfect for colleagues, clients, friends, and family."
     />
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,127 +33,183 @@
         },
       };
     </script>
+    
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
+  
   <body class="bg-page text-ink antialiased">
     <div class="min-h-screen">
+      
+      <!-- ===== HEADER ===== -->
       <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <!-- Main Header -->
         <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3">
+          <!-- Logo -->
           <a
             href="#"
             class="inline-flex items-center gap-2"
-            aria-label="FairPrice Gift Cards"
+            aria-label="FairPrice Gift Cards Home"
           >
-            <img src="./src/assets/images/FPriceG-logo.png" alt="FairPrice Group" class="h-10" />
+            <img 
+              src="./src/assets/images/FPriceG-logo.png" 
+              alt="FairPrice Group Logo" 
+              class="h-10"
+            />
           </a>
+          
+          <!-- CTA Buttons -->
           <div class="flex items-center gap-2">
             <button
               class="border border-brand px-5 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              aria-label="Send Personal eGift Card"
             >
               Send Personal eGift
             </button>
             <button
               class="bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              aria-label="Corporate Gifting Solutions"
             >
               Corporate Gifting
             </button>
           </div>
         </div>
+        
+        <!-- Navigation Menu -->
         <div class="border-t border-slate-100 bg-white">
-          <div
+          <nav
             class="mx-auto hidden max-w-6xl items-center justify-center gap-6 px-4 py-2 text-xs font-medium text-muted md:flex"
+            aria-label="Main navigation"
           >
-            <a class="transition hover:text-brand" href="#">Personal Use Gift Cards</a>
-            <a class="transition hover:text-brand" href="#">Corporate Gift Cards</a>
-            <a class="transition hover:text-brand" href="#">eGift Cards</a>
-            <a class="transition hover:text-brand" href="#">Physical Gift Cards</a>
-            <a class="transition hover:text-brand" href="#">FAQs</a>
-          </div>
+            <a class="transition hover:text-brand" href="#personal-cards">Personal Use Gift Cards</a>
+            <a class="transition hover:text-brand" href="#corporate-cards">Corporate Gift Cards</a>
+            <a class="transition hover:text-brand" href="#egift">eGift Cards</a>
+            <a class="transition hover:text-brand" href="#physical">Physical Gift Cards</a>
+            <a class="transition hover:text-brand" href="#faq">FAQs</a>
+          </nav>
         </div>
       </header>
 
+      <!-- ===== MAIN CONTENT ===== -->
       <main>
-        <section class="px-4 pb-2 pt-6">
+        
+        <!-- Hero Carousel Section -->
+        <section class="px-4 pb-2 pt-6" aria-label="Hero carousel">
           <div class="mx-auto max-w-6xl">
-            <div id="hero-carousel" class="hero-carousel-container overflow-hidden rounded-3xl bg-white shadow-soft min-h-[400px] lg:min-h-[500px]"></div>
+            <!-- Carousel Container - Dynamically populated by JavaScript -->
+            <div 
+              id="hero-carousel" 
+              class="hero-carousel-container overflow-hidden rounded-3xl bg-white shadow-soft min-h-[400px] lg:min-h-[500px]"
+              role="region"
+              aria-label="Featured gift card promotions"
+            ></div>
           </div>
         </section>
 
-        <section class="section-shell">
+        <!-- Benefits Section -->
+        <section class="section-shell" aria-labelledby="benefits-heading">
           <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-center text-2xl font-bold text-brand-dark">
+            <h2 id="benefits-heading" class="text-center text-2xl font-bold text-brand-dark">
               Gifting made practical, easy and meaningful
             </h2>
+            <!-- Benefits Grid - Dynamically populated by JavaScript -->
             <div id="benefits-grid" class="mt-7 grid gap-4 md:grid-cols-3"></div>
           </div>
         </section>
 
-        <section class="pb-14">
+        <!-- Occasions Section -->
+        <section class="pb-14" aria-labelledby="occasions-heading">
           <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-center text-2xl font-bold text-brand-dark">
+            <h2 id="occasions-heading" class="text-center text-2xl font-bold text-brand-dark">
               The perfect gift for every day and any occasion
             </h2>
+            <!-- Occasion Tabs - Dynamically populated by JavaScript -->
             <div id="occasion-tabs" class="mt-6"></div>
           </div>
         </section>
 
-        <section class="bg-brand-dark py-14">
+        <!-- Delivery Options Section -->
+        <section class="bg-brand-dark py-14" aria-labelledby="delivery-heading">
           <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-center text-2xl font-bold text-white">
-              Gifting made practical, easy and meaningful
+            <h2 id="delivery-heading" class="text-center text-2xl font-bold text-white">
+              Choose your preferred delivery method
             </h2>
+            <!-- Delivery Cards - Dynamically populated by JavaScript -->
             <div id="delivery-cards" class="mt-8 grid gap-5 lg:grid-cols-2"></div>
           </div>
         </section>
 
-        <section class="section-shell bg-white">
+        <!-- eGift Knowledge Section -->
+        <section class="section-shell bg-white" id="egift" aria-labelledby="egift-heading">
           <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-center text-2xl font-bold text-brand-dark">
+            <h2 id="egift-heading" class="text-center text-2xl font-bold text-brand-dark">
               All you need to know about eGift Cards
             </h2>
+            <!-- eGift Tabs - Dynamically populated by JavaScript -->
             <div id="egift-knowledge-tabs" class="mt-6"></div>
           </div>
         </section>
 
-        <section class="section-shell border-t border-slate-100 bg-white">
+        <!-- Physical Gift Card Knowledge Section -->
+        <section class="section-shell border-t border-slate-100 bg-white" id="physical" aria-labelledby="physical-heading">
           <div class="mx-auto max-w-6xl px-4">
-            <h2 class="text-center text-2xl font-bold text-brand-dark">
+            <h2 id="physical-heading" class="text-center text-2xl font-bold text-brand-dark">
               All you need to know about Physical Gift Cards
             </h2>
+            <!-- Physical Gift Card Tabs - Dynamically populated by JavaScript -->
             <div id="physical-knowledge-tabs" class="mt-6"></div>
           </div>
         </section>
 
-        <section class="border-y border-slate-200 bg-slate-100 py-10">
+        <!-- Brand Partners Section -->
+        <section class="border-y border-slate-200 bg-slate-100 py-10" aria-labelledby="brands-heading">
           <div class="mx-auto max-w-6xl px-4">
-            <h3 class="text-center text-xl font-bold text-brand-dark">Accepted in-store and online</h3>
+            <h3 id="brands-heading" class="text-center text-xl font-bold text-brand-dark">
+              Accepted in-store and online
+            </h3>
+            <!-- Brand Strip - Dynamically populated by JavaScript -->
             <div id="brand-strip" class="mt-6"></div>
           </div>
         </section>
 
-        <section class="section-shell bg-white">
+        <!-- FAQ Section -->
+        <section class="section-shell bg-white" id="faq" aria-labelledby="faq-heading">
           <div class="mx-auto max-w-4xl px-4">
-            <h2 class="text-center text-2xl font-bold text-brand-dark">Got questions?</h2>
+            <h2 id="faq-heading" class="text-center text-2xl font-bold text-brand-dark">
+              Got questions?
+            </h2>
+            <!-- FAQ Accordion - Dynamically populated by JavaScript -->
             <div id="faq-accordion" class="mt-6"></div>
+            
+            <!-- View All FAQ Button -->
             <div class="mt-8 text-center">
               <button
                 class="rounded-full border border-brand px-5 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                aria-label="View all frequently asked questions"
               >
                 View all FAQ
               </button>
             </div>
           </div>
         </section>
+        
       </main>
 
+      <!-- ===== FOOTER ===== -->
       <footer class="border-t border-slate-200 bg-white py-6">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4">
-          <p class="text-sm text-muted">Copyright <span id="year"></span> FairPrice Group</p>
-          <p class="text-sm text-muted">Terms &amp; Conditions apply.</p>
+          <p class="text-sm text-muted">
+            Copyright &copy; <span id="year"></span> FairPrice Group. All rights reserved.
+          </p>
+          <p class="text-sm text-muted">
+            Terms &amp; Conditions apply.
+          </p>
         </div>
       </footer>
+      
     </div>
 
+    <!-- JavaScript Module -->
     <script type="module" src="./src/js/app.js"></script>
   </body>
 </html>
