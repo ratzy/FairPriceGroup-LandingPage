@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FairPrice Gift Cards Landing</title>
+    <meta
+      name="description"
+      content="Gift practical moments with FairPrice eGift and physical gift cards."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                DEFAULT: "rgb(var(--color-brand) / <alpha-value>)",
+                dark: "rgb(var(--color-brand-dark) / <alpha-value>)",
+                soft: "rgb(var(--color-brand-soft) / <alpha-value>)",
+              },
+              ink: "rgb(var(--color-ink) / <alpha-value>)",
+              muted: "rgb(var(--color-muted) / <alpha-value>)",
+              accent: "rgb(var(--color-accent) / <alpha-value>)",
+              page: "rgb(var(--color-page) / <alpha-value>)",
+            },
+            boxShadow: {
+              soft: "0 20px 45px -28px rgb(var(--color-brand-dark) / 0.45)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body class="bg-page text-ink antialiased">
+    <div class="min-h-screen">
+      <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+        <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 text-lg font-extrabold tracking-tight text-brand-dark"
+            aria-label="FairPrice Gift Cards"
+          >
+            <span class="brand-mark">FP</span>
+            FairPrice
+            <span class="text-brand">Gift</span>
+          </a>
+          <div class="flex items-center gap-2">
+            <button
+              class="rounded-full border border-brand px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+            >
+              Send Personal Gift
+            </button>
+            <button
+              class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+            >
+              Corporate Gifting
+            </button>
+          </div>
+        </div>
+        <div class="border-t border-slate-100 bg-white">
+          <div
+            class="mx-auto hidden max-w-6xl items-center justify-center gap-6 px-4 py-2 text-xs font-medium text-muted md:flex"
+          >
+            <a class="transition hover:text-brand" href="#">Personal Use Gift Cards</a>
+            <a class="transition hover:text-brand" href="#">Corporate Gift Cards</a>
+            <a class="transition hover:text-brand" href="#">eGift Cards</a>
+            <a class="transition hover:text-brand" href="#">Physical Gift Cards</a>
+            <a class="transition hover:text-brand" href="#">FAQs</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="px-4 pb-2 pt-6">
+          <div class="mx-auto max-w-6xl">
+            <div class="hero-shell overflow-hidden rounded-3xl bg-white shadow-soft">
+              <div class="hero-media min-h-[300px] lg:min-h-[390px]"></div>
+              <div class="bg-brand p-6 text-white md:p-10">
+                <p class="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">
+                  FairPrice Gift Cards
+                </p>
+                <h1 class="mt-3 text-3xl font-bold leading-tight md:text-4xl">
+                  Everyday gifting, made a little better
+                </h1>
+                <p class="mt-4 text-sm leading-6 text-white/90 md:text-base">
+                  For everyone who deserves a little gesture. Pick a design, choose a value,
+                  and make someone&apos;s day.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <button
+                    class="rounded-full bg-white px-5 py-2 text-sm font-semibold text-brand transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                  >
+                    Send Personal Gift
+                  </button>
+                  <button
+                    class="rounded-full border border-white/80 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                  >
+                    Corporate Gifting
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-shell">
+          <div class="mx-auto max-w-6xl px-4">
+            <h2 class="text-center text-2xl font-bold text-brand-dark">
+              Gifting made practical, easy and meaningful
+            </h2>
+            <div id="benefits-grid" class="mt-7 grid gap-4 md:grid-cols-3"></div>
+          </div>
+        </section>
+
+        <section class="pb-14">
+          <div class="mx-auto max-w-6xl px-4">
+            <h2 class="text-center text-2xl font-bold text-brand-dark">
+              The perfect gift for every day and any occasion
+            </h2>
+            <div id="occasion-tabs" class="mt-6"></div>
+          </div>
+        </section>
+
+        <section class="bg-brand-dark py-14">
+          <div class="mx-auto max-w-6xl px-4">
+            <h2 class="text-center text-2xl font-bold text-white">
+              Gifting made practical, easy and meaningful
+            </h2>
+            <div id="delivery-cards" class="mt-8 grid gap-5 lg:grid-cols-2"></div>
+          </div>
+        </section>
+
+        <section class="section-shell bg-white">
+          <div class="mx-auto max-w-6xl px-4">
+            <h2 class="text-center text-2xl font-bold text-brand-dark">
+              All you need to know about eGift Cards
+            </h2>
+            <div id="egift-knowledge-tabs" class="mt-6"></div>
+          </div>
+        </section>
+
+        <section class="section-shell border-t border-slate-100 bg-white">
+          <div class="mx-auto max-w-6xl px-4">
+            <h2 class="text-center text-2xl font-bold text-brand-dark">
+              All you need to know about Physical Gift Cards
+            </h2>
+            <div id="physical-knowledge-tabs" class="mt-6"></div>
+          </div>
+        </section>
+
+        <section class="border-y border-slate-200 bg-slate-100 py-10">
+          <div class="mx-auto max-w-6xl px-4">
+            <h3 class="text-center text-xl font-bold text-brand-dark">Accepted in-store and online</h3>
+            <div id="brand-strip" class="mt-6"></div>
+          </div>
+        </section>
+
+        <section class="section-shell bg-white">
+          <div class="mx-auto max-w-4xl px-4">
+            <h2 class="text-center text-2xl font-bold text-brand-dark">Got questions?</h2>
+            <div id="faq-accordion" class="mt-6"></div>
+            <div class="mt-8 text-center">
+              <button
+                class="rounded-full border border-brand px-5 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              >
+                View all FAQ
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-slate-200 bg-white py-6">
+        <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4">
+          <p class="text-sm text-muted">Copyright <span id="year"></span> FairPrice Group</p>
+          <p class="text-sm text-muted">Terms &amp; Conditions apply.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/js/app.js"></script>
+  </body>
+</html>
