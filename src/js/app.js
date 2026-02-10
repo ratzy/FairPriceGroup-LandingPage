@@ -31,11 +31,14 @@ function initHeroCarousel() {
       image: "./src/assets/images/hero-C1.png",
       alt: "FairPrice Gift Cards - Everyday gifting made better",
     },
-    // Add more slides as needed when more hero images are available
-    // {
-    //   image: "./src/assets/images/hero-C2.png",
-    //   alt: "FairPrice Gift Cards - Corporate Gifting",
-    // },
+    {
+      image: "./src/assets/images/hero-C2.png",
+      alt: "FairPrice Gift Cards - Corporate Gifting Solutions",
+    },
+    {
+      image: "./src/assets/images/hero-C3.png",
+      alt: "FairPrice Gift Cards - Perfect for every occasion",
+    },
   ];
 
   // Initialize carousel with 6-second autoplay (based on e-commerce market research)
