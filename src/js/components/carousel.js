@@ -103,11 +103,11 @@ export class HeroCarousel {
         </svg>
       </button>
 
-      <!-- Indicators -->
-      <div class="carousel-indicators absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <!-- Indicators - Bottom of carousel -->
+      <div class="carousel-indicators absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
         ${this.slides.map((_, index) => `
           <button 
-            class="carousel-indicator w-2.5 h-2.5 rounded-full transition-all ${index === 0 ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}"
+            class="carousel-indicator w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? "bg-white scale-125" : "bg-white/60 hover:bg-white/80"}"
             data-slide-index="${index}"
             aria-label="Go to slide ${index + 1}"
           ></button>
@@ -169,11 +169,11 @@ export class HeroCarousel {
 
     // Update indicators
     if (this.indicators.length > 0) {
-      this.indicators[this.currentIndex].classList.remove("bg-white", "w-8");
-      this.indicators[this.currentIndex].classList.add("bg-white/50");
+      this.indicators[this.currentIndex].classList.remove("bg-white", "scale-125");
+      this.indicators[this.currentIndex].classList.add("bg-white/60");
 
-      this.indicators[index].classList.remove("bg-white/50");
-      this.indicators[index].classList.add("bg-white", "w-8");
+      this.indicators[index].classList.remove("bg-white/60");
+      this.indicators[index].classList.add("bg-white", "scale-125");
     }
 
     this.currentIndex = index;
