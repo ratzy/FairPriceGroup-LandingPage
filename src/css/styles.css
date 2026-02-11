@@ -369,3 +369,61 @@ p, span, a, button, input, textarea, select {
 .delivery-card-image image {
     max-height: 300px;
 }
+
+/* eGift Tabs Section Styles */
+.egift-tabs-section .egift-tab-button {
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.egift-tab-button[aria-selected="true"] {
+  color: rgb(var(--color-brand-dark));
+}
+
+.egift-tab-button[aria-selected="true"] .tab-underline {
+  display: block;
+}
+
+.egift-tab-button:not([aria-selected="true"]) .tab-underline {
+  display: none;
+}
+
+.tab-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgb(var(--color-brand));
+}
+
+/* eGift Step Cards */
+.egift-step-card {
+  padding: 1rem;
+}
+
+.step-badge {
+  background-color: rgb(var(--color-brand-dark));
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.step-circle {
+  background-color: #D4EFF7;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .step-circle {
+    width: 16rem;
+    height: 16rem;
+  }
+}

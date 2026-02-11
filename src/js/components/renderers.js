@@ -150,13 +150,24 @@ export function renderDeliveryCards(target, cards) {
 
 function renderStepCard(step) {
   return `
-    <article class="surface-card p-5">
-      <span class="step-pill">${escapeHTML(step.step)}</span>
-      <div class="mt-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-brand-dark">
-        ${getIcon(step.icon)}
+    <article class="egift-step-card relative flex flex-col items-center text-center">
+      <!-- Step Badge (Coded) -->
+      <div class="step-badge bg-brand-dark text-white px-6 py-2.5 rounded-lg font-bold text-sm uppercase mb-6">
+        Step ${escapeHTML(step.step)}
       </div>
-      <h3 class="mt-4 text-lg font-bold text-brand-dark">${escapeHTML(step.title)}</h3>
-      <p class="mt-2 text-sm leading-6 text-muted">${escapeHTML(step.description)}</p>
+      
+      <!-- Circular Background with Phone Image -->
+      <div class="step-circle relative flex items-center justify-center w-80 h-80 rounded-full bg-[#D4EFF7] mb-6">
+        <img 
+          src="./src/assets/images/${escapeHTML(step.image)}" 
+          alt="${escapeHTML(step.title)}"
+          class="max-w-[70%] max-h-[70%] object-contain"
+        />
+      </div>
+      
+      <!-- Title and Description -->
+      <h3 class="text-xl font-bold text-brand-dark mb-3">${escapeHTML(step.title)}</h3>
+      <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.description)}</p>
     </article>
   `;
 }
@@ -179,9 +190,10 @@ export function renderStepTabs(target, tabs, options = {}) {
         aria-controls="${escapeHTML(tab.id)}-panel"
         data-tab-button
         data-tab-target="${escapeHTML(tab.id)}-panel"
-        class="tab-button px-4 py-2 text-sm font-semibold"
+        class="egift-tab-button relative px-6 py-3 text-base font-semibold transition-colors ${index === 0 ? "text-brand-dark" : "text-slate-500 hover:text-brand-dark"}"
       >
         ${escapeHTML(tab.label)}
+        ${index === 0 ? '<span class="tab-underline absolute bottom-0 left-0 right-0 h-1 bg-brand"></span>' : ""}
       </button>
     `,
     )
@@ -198,7 +210,7 @@ export function renderStepTabs(target, tabs, options = {}) {
         class="tab-panel"
         ${index !== 0 ? "hidden" : ""}
       >
-        <div class="grid gap-4 md:grid-cols-3">
+        <div class="grid gap-12 md:grid-cols-3 mt-12">
           ${tab.steps.map((step) => renderStepCard(step)).join("")}
         </div>
       </div>
@@ -207,11 +219,17 @@ export function renderStepTabs(target, tabs, options = {}) {
     .join("");
 
   target.innerHTML = `
-    <section class="tabs-shell" data-tabs>
-      <div role="tablist" aria-label="${escapeHTML(ariaLabel)}" class="flex flex-wrap justify-center gap-3">
+    <section class="egift-tabs-section" data-tabs>
+      <div
+        role="tablist"
+        aria-label="${escapeHTML(ariaLabel)}"
+        class="flex justify-center gap-8 border-b-2 border-slate-200"
+      >
         ${tabButtons}
       </div>
-      <div class="mt-6">${tabPanels}</div>
+      <div class="mt-8">
+        ${tabPanels}
+      </div>
     </section>
   `;
 }
