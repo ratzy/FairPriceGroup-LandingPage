@@ -2,21 +2,21 @@ export const landingContent = {
   benefits: [
     {
       title: "Practical",
-      icon: "spark",
+      icon: "icon-practical.png",
       description:
-        "Redeemable for groceries, daily essentials and household needs at over 220 FairPrice stores and online.",
+        "Redeemable for groceries, daily essentials, and indulgences at over 200 FairPrice and Unity stores, or online.",
     },
     {
       title: "Easy",
-      icon: "bolt",
+      icon: "icon-easy.png",
       description:
-        "Send instantly or schedule ahead for birthdays, milestones and special moments with only a few clicks.",
+        "Send instantly or schedule ahead. Use it in-store or online, partially or fully.",
     },
     {
       title: "Meaningful",
-      icon: "heart",
+      icon: "icon-meaningful.png",
       description:
-        "Choose useful gifts and personalize each card with your message to make every delivery thoughtful.",
+        "Bring warmth to any occasion. Choose your gift value and personalise it with your message.",
     },
   ],
   occasions: [

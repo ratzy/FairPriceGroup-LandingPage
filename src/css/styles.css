@@ -302,3 +302,17 @@ body {
 .accordion-panel[hidden] {
   display: none;
 }
+
+/* Benefits Section Styles */
+.benefit-card {
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+.benefit-card:hover {
+  transform: translateY(-2px);
+}
+
+.benefit-card img {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}

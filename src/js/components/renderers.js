@@ -41,13 +41,28 @@ export function renderBenefits(target, benefits) {
   target.innerHTML = benefits
     .map(
       (benefit, index) => `
-      <article class="surface-card px-5 py-6 text-center">
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-brand">0${index + 1}</p>
-        <div class="mx-auto mt-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-brand-dark">
-          ${getIcon(benefit.icon)}
+      <article class="benefit-card relative rounded-2xl border-2 border-brand-dark/10 bg-white px-6 py-8 text-center transition-all hover:border-brand/30 hover:shadow-lg">
+        <!-- Number Badge -->
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark text-base font-bold text-white">
+            ${index + 1}
+          </div>
         </div>
-        <h3 class="mt-4 text-lg font-bold text-brand-dark">${escapeHTML(benefit.title)}</h3>
-        <p class="mt-2 text-sm leading-6 text-muted">${escapeHTML(benefit.description)}</p>
+        
+        <!-- Icon -->
+        <div class="mx-auto mt-4 mb-6 flex h-24 w-24 items-center justify-center">
+          <img 
+            src="./src/assets/images/${benefit.icon}" 
+            alt="${escapeHTML(benefit.title)} icon"
+            class="h-full w-full object-contain"
+          />
+        </div>
+        
+        <!-- Title -->
+        <h3 class="mb-3 text-xl font-bold text-brand-dark">${escapeHTML(benefit.title)}</h3>
+        
+        <!-- Description -->
+        <p class="text-sm leading-relaxed text-muted">${escapeHTML(benefit.description)}</p>
       </article>
     `,
     )
