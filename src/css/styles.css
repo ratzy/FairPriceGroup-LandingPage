@@ -349,3 +349,24 @@ p, span, a, button, input, textarea, select {
 .occasion-card-label {
   border-top: 1px solid rgb(226 232 240);
 }
+
+/* Delivery Cards Section Styles */
+.delivery-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delivery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.delivery-card-image {
+  background-color: #D4EFF7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-card-image img {
+  max-height: 240px;
+}

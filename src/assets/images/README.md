@@ -27,3 +27,9 @@ These icons are used in the "Gifting made practical, easy and meaningful" sectio
 12. **occasion-more.jpg** - Navy background with colorful leaves pattern
 
 These images are used in the "The perfect gift for every day and any occasion" section.
+
+## Delivery Cards Section Images
+13. **eGiftCards.png** - Mobile phone showing eGift card with $5.00 value and "EGG-STRA special" message
+14. **pGiftCards.png** - Physical gift cards showing "$20 LETTUCE celebrate you!" design with envelope
+
+These images are used in the "Gifting made practical, easy and meaningful" section.

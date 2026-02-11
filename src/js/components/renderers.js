@@ -107,28 +107,41 @@ export function renderDeliveryCards(target, cards) {
   target.innerHTML = cards
     .map(
       (card) => `
-      <article class="rounded-2xl border border-white/20 bg-white p-6">
-        <div class="delivery-preview ${escapeHTML(card.themeClass)}"></div>
-        <h3 class="mt-5 text-xl font-bold text-brand-dark">${escapeHTML(card.title)}</h3>
-        <p class="mt-1 text-sm font-semibold text-brand">${escapeHTML(card.description)}</p>
-        <ul class="mt-4 space-y-2 text-sm text-slate-700">
-          ${card.bullets
-            .map(
-              (bullet) => `
-              <li class="flex gap-2">
-                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-                <span>${escapeHTML(bullet)}</span>
-              </li>
-            `,
-            )
-            .join("")}
-        </ul>
-        <button
-          type="button"
-          class="mt-5 rounded-full border border-brand px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-        >
-          ${escapeHTML(card.action)}
-        </button>
+      <article class="delivery-card overflow-hidden rounded-2xl bg-white shadow-lg">
+        <!-- Card Image with Light Blue Background -->
+        <div class="delivery-card-image bg-[#D4EFF7] p-8 flex items-center justify-center min-h-[280px]">
+          <img 
+            src="./src/assets/images/${escapeHTML(card.image)}" 
+            alt="${escapeHTML(card.title)}"
+            class="max-w-full h-auto object-contain"
+          />
+        </div>
+        
+        <!-- Card Content -->
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-brand-dark">${escapeHTML(card.title)}</h3>
+          <p class="mt-2 text-base font-semibold text-slate-900">${escapeHTML(card.description)}</p>
+          
+          <ul class="mt-6 space-y-3 text-sm text-slate-700">
+            ${card.bullets
+              .map(
+                (bullet) => `
+                <li class="flex gap-3 leading-relaxed">
+                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-dark"></span>
+                  <span>${escapeHTML(bullet)}</span>
+                </li>
+              `,
+              )
+              .join("")}
+          </ul>
+          
+          <button
+            type="button"
+            class="mt-8 border-2 border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
+          >
+            ${escapeHTML(card.action)}
+          </button>
+        </div>
       </article>
     `,
     )
