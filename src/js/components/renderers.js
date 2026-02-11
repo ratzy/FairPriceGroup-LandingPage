@@ -152,18 +152,14 @@ function renderStepCard(step) {
   return `
     <article class="egift-step-card relative flex flex-col items-center text-center">
       <!-- Step Badge (Coded) -->
-      <div class="step-badge bg-brand-dark text-white px-6 py-2.5 rounded-lg font-bold text-sm uppercase mb-6">
-        Step ${escapeHTML(step.step)}
-      </div>
+      
       
       <!-- Circular Background with Phone Image -->
-      <div class="step-circle relative flex items-center justify-center w-80 h-80 rounded-full bg-[#D4EFF7] mb-6">
         <img 
           src="./src/assets/images/${escapeHTML(step.image)}" 
           alt="${escapeHTML(step.title)}"
-          class="max-w-[70%] max-h-[70%] object-contain"
+          class="flex items-center justify-center mb- object-contain"
         />
-      </div>
       
       <!-- Title and Description -->
       <h3 class="text-xl font-bold text-brand-dark mb-3">${escapeHTML(step.title)}</h3>

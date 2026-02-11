@@ -411,19 +411,12 @@ p, span, a, button, input, textarea, select {
   letter-spacing: 0.05em;
 }
 
-.step-circle {
-  background-color: #D4EFF7;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.egift-step-card img {
+  width: 10rem;
 }
 
 @media (max-width: 768px) {
-  .step-circle {
-    width: 16rem;
-    height: 16rem;
+  .egift-step-card img {
+    width: 8rem;
   }
 }

@@ -108,20 +108,20 @@ export const landingContent = {
       steps: [
         {
           step: "1",
-          title: "Open email delivery",
-          description: "Recipient opens the gift card email and taps the card link.",
+          title: "Check email",
+          description: "You or your recipient will receive an email providing details of your unique ‘eGift Card’.",
           image: "egift-use-step1.png",
         },
         {
           step: "2",
-          title: "Present at checkout",
-          description: "Show barcode or gift code to cashier during payment.",
+          title: "View eGift card",
+          description: "Tap ‘View eGift Card’ for immediate use in-store or online.",
           image: "egift-use-step2.png",
         },
         {
           step: "3",
-          title: "Redeem balance",
-          description: "Any remaining value stays in the card for the next purchase.",
+          title: "Save it for later",
+          description: "Add the eGift Card to your FairPrice Group app for future use.",
           image: "egift-use-step3.png",
         },
       ],
@@ -132,20 +132,20 @@ export const landingContent = {
       steps: [
         {
           step: "1",
-          title: "Open card details",
-          description: "Access your gift card from the email or shared card link.",
+          title: "Open app & go to Account",
+          description: "Tap the ‘Account’ icon on the top-left corner.",
           image: "egift-view-step1.png",
         },
         {
           step: "2",
-          title: "Check balance",
-          description: "View current available balance before making payment.",
+          title: "Select ‘Vouchers’",
+          description: "Tap ‘Vouchers’ on your Account page.",
           image: "egift-view-step2.png",
         },
         {
           step: "3",
-          title: "Track activity",
-          description: "Review redemption history and upcoming expiry details.",
+          title: "View balance",
+          description: "Tap ‘eGift Cards’ tab to see your balance and transaction history.",
           image: "egift-view-step3.png",
         },
       ],
