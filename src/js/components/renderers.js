@@ -74,68 +74,30 @@ export function renderOccasionTabs(target, occasions) {
     return;
   }
 
-  const tabButtons = occasions
-    .map(
-      (occasion, index) => `
-      <button
-        id="occasion-tab-${escapeHTML(occasion.id)}"
-        role="tab"
-        type="button"
-        aria-selected="${index === 0 ? "true" : "false"}"
-        aria-controls="occasion-panel-${escapeHTML(occasion.id)}"
-        data-tab-button
-        data-tab-target="occasion-panel-${escapeHTML(occasion.id)}"
-        class="tab-button flex flex-col p-3 text-left"
-      >
-        <span class="occasion-swatch ${escapeHTML(occasion.themeClass)}"></span>
-        <span class="mt-2 text-sm font-semibold">${escapeHTML(occasion.label)}</span>
-      </button>
-    `,
-    )
-    .join("");
-
-  const tabPanels = occasions
-    .map(
-      (occasion, index) => `
-      <div
-        id="occasion-panel-${escapeHTML(occasion.id)}"
-        role="tabpanel"
-        aria-labelledby="occasion-tab-${escapeHTML(occasion.id)}"
-        data-tab-panel
-        class="tab-panel"
-        ${index !== 0 ? "hidden" : ""}
-      >
-        <article class="grid items-center gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 md:grid-cols-[1.2fr,0.8fr] md:p-6">
-          <div>
-            <h3 class="text-xl font-bold text-brand-dark">${escapeHTML(occasion.title)}</h3>
-            <p class="mt-2 text-sm leading-6 text-muted">${escapeHTML(occasion.description)}</p>
-            <button
-              type="button"
-              class="mt-4 rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-            >
-              ${escapeHTML(occasion.cta)}
-            </button>
-          </div>
-          <div class="occasion-preview ${escapeHTML(occasion.themeClass)}"></div>
-        </article>
-      </div>
-    `,
-    )
-    .join("");
-
   target.innerHTML = `
-    <section class="tabs-shell" data-tabs>
-      <div
-        role="tablist"
-        aria-label="Gift occasion categories"
-        class="grid gap-3 sm:grid-cols-3 lg:grid-cols-6"
-      >
-        ${tabButtons}
-      </div>
-      <div class="mt-6">
-        ${tabPanels}
-      </div>
-    </section>
+    <div class="occasion-cards-grid grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+      ${occasions
+        .map(
+          (occasion) => `
+        <article class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:shadow-xl hover:-translate-y-1">
+          <!-- Card Image -->
+          <div class="occasion-card-image relative aspect-[4/3] overflow-hidden">
+            <img 
+              src="./src/assets/images/${escapeHTML(occasion.image)}" 
+              alt="${escapeHTML(occasion.label)}"
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+          
+          <!-- Card Label -->
+          <div class="occasion-card-label bg-white px-4 py-3 text-center">
+            <p class="text-sm font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
+          </div>
+        </article>
+      `,
+        )
+        .join("")}
+    </div>
   `;
 }
 

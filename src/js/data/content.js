@@ -23,56 +23,32 @@ export const landingContent = {
     {
       id: "birthday",
       label: "Birthday",
+      image: "occasion-birthday.jpg",
       themeClass: "occasion-birthday",
-      title: "Birthday picks that feel useful and thoughtful",
-      description:
-        "Choose colourful card designs and schedule delivery so your gift arrives exactly on the special day.",
-      cta: "Create birthday gift",
     },
     {
       id: "celebration",
       label: "Celebrations",
+      image: "occasion-celebrations.jpg",
       themeClass: "occasion-celebration",
-      title: "Celebrate personal wins and milestones",
-      description:
-        "Perfect for housewarmings, promotions and happy moments where practical support matters.",
-      cta: "Send celebration card",
     },
     {
-      id: "graduation",
-      label: "Graduation",
-      themeClass: "occasion-graduation",
-      title: "Congratulate graduates with everyday value",
-      description:
-        "A practical gift that helps new graduates ease into their next chapter with essentials they can use.",
-      cta: "Gift for graduates",
+      id: "gratitude",
+      label: "Gratitude",
+      image: "occasion-gratitude.jpg",
+      themeClass: "occasion-gratitude",
     },
     {
       id: "thinking-of-you",
       label: "Thinking of you",
+      image: "occasion-thinking.jpg",
       themeClass: "occasion-thinking",
-      title: "A simple gesture for someone on your mind",
-      description:
-        "Send a warm message with a useful gift card when words alone are not enough.",
-      cta: "Send thoughtful gift",
     },
     {
-      id: "thanks",
-      label: "Thank you",
-      themeClass: "occasion-thanks",
-      title: "Say thanks with everyday essentials",
-      description:
-        "From mentors to teammates, show appreciation with a practical card anyone can redeem easily.",
-      cta: "Share a thank-you gift",
-    },
-    {
-      id: "holidays",
-      label: "Festive season",
-      themeClass: "occasion-holidays",
-      title: "Festive gifting made quick and flexible",
-      description:
-        "Great for end-of-year gifting with scheduled send options and a wide range of redemption channels.",
-      cta: "Plan festive gifting",
+      id: "more",
+      label: "And more",
+      image: "occasion-more.jpg",
+      themeClass: "occasion-more",
     },
   ],
   deliveryCards: [

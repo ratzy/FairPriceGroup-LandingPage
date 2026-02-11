@@ -18,3 +18,12 @@ The carousel will automatically use all available hero images (hero-C1.png, hero
 7. **icon-meaningful.png** - Envelope with smiley face icon
 
 These icons are used in the "Gifting made practical, easy and meaningful" section.
+
+## Occasions Section Images
+8. **occasion-birthday.jpg** - "Have an unBEET-able Birthday!" - vegetables with cart
+9. **occasion-celebrations.jpg** - "Congrats on your little BUN-dl's of joy!" - bun character
+10. **occasion-gratitude.jpg** - "You are an absolute GEM!" - gem character
+11. **occasion-thinking.jpg** - "Get well soon!" - fruit characters
+12. **occasion-more.jpg** - Navy background with colorful leaves pattern
+
+These images are used in the "The perfect gift for every day and any occasion" section.
