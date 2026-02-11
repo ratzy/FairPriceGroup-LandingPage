@@ -9,12 +9,18 @@
       content="Gift practical moments with FairPrice eGift and physical gift cards. Perfect for colleagues, clients, friends, and family."
     />
     
+    <!-- Museo Sans Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/wnc1kxe.css">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['"Museo Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            },
             colors: {
               brand: {
                 DEFAULT: "rgb(var(--color-brand) / <alpha-value>)",

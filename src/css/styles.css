@@ -9,6 +9,9 @@
   --radius-card: 1rem;
   --radius-panel: 1.5rem;
   --section-space: clamp(2.5rem, 8vw, 4.5rem);
+  
+  /* Typography */
+  --font-museo: "Museo Sans", system-ui, -apple-system, sans-serif;
 }
 
 *,
@@ -19,13 +22,19 @@
 
 body {
   margin: 0;
-  font-family:
-    Inter,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+  font-family: var(--font-museo);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography - Museo Sans for all text */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-museo);
+  font-weight: 700;
+}
+
+p, span, a, button, input, textarea, select {
+  font-family: var(--font-museo);
 }
 
 .section-shell {
