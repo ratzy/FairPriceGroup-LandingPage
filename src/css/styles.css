@@ -354,19 +354,18 @@ p, span, a, button, input, textarea, select {
 .delivery-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.delivery-card .content-wrapper{
+  margin-top:-4rem;
+  padding-top:6rem;
+}
 
 .delivery-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
-.delivery-card-image {
-  background-color: #D4EFF7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.delivery-card-image{
+  margin: 0 1rem;
 }
-
-.delivery-card-image img {
-  max-height: 240px;
+.delivery-card-image image {
+    max-height: 300px;
 }

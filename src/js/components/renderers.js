@@ -107,9 +107,9 @@ export function renderDeliveryCards(target, cards) {
   target.innerHTML = cards
     .map(
       (card) => `
-      <article class="delivery-card overflow-hidden rounded-2xl bg-white shadow-lg">
+      <article class="delivery-card overflow-hidden rounded-2xl">
         <!-- Card Image with Light Blue Background -->
-        <div class="delivery-card-image bg-[#D4EFF7] p-8 flex items-center justify-center min-h-[280px]">
+        <div class="delivery-card-image flex items-center justify-center">
           <img 
             src="./src/assets/images/${escapeHTML(card.image)}" 
             alt="${escapeHTML(card.title)}"
@@ -118,7 +118,7 @@ export function renderDeliveryCards(target, cards) {
         </div>
         
         <!-- Card Content -->
-        <div class="p-8">
+        <div class="p-8 bg-[#FFFFFF] content-wrapper rounded-2xl">
           <h3 class="text-2xl font-bold text-brand-dark">${escapeHTML(card.title)}</h3>
           <p class="mt-2 text-base font-semibold text-slate-900">${escapeHTML(card.description)}</p>
           

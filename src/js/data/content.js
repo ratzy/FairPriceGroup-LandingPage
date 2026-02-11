@@ -60,7 +60,7 @@ export const landingContent = {
       bullets: [
         "Instant/scheduled delivery via Email",
         "Personal or bulk sending",
-        "The thoughtful gift for every need, from a simple "thank you" to major milestones and celebrations",
+        "The thoughtful gift for every need, from a simple thank you to major milestones and celebrations",
       ],
       action: "Send eGift card",
     },
