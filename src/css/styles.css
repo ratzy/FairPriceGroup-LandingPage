@@ -215,7 +215,7 @@ p, span, a, button, input, textarea, select {
 }
 
 /* Tablet - Slightly larger text */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .hero-content-inner h1 {
     font-size: 2rem;
   }
@@ -225,8 +225,8 @@ p, span, a, button, input, textarea, select {
   }
 }
 
-/* Desktop - Overlay on right side with blue background (≥ 1024px) */
-@media (min-width: 1024px) {
+/* Desktop - Blue box overlay on right side (>1024px) */
+@media (min-width: 1025px) {
   .hero-overlay {
     align-items: center;
     justify-content: flex-end;
@@ -276,16 +276,16 @@ p, span, a, button, input, textarea, select {
   transform: scale(1.1);
 }
 
-/* Hide on mobile and tablet */
-@media (max-width: 1023px) {
+/* Hide on mobile and tablet (≤1024px) */
+@media (max-width: 1024px) {
   .carousel-prev,
   .carousel-next {
     display: none;
   }
 }
 
-/* Show on desktop */
-@media (min-width: 1024px) {
+/* Show on desktop (>1024px) */
+@media (min-width: 1025px) {
   .carousel-prev,
   .carousel-next {
     display: flex;
