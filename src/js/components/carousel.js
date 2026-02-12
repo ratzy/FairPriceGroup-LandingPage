@@ -124,7 +124,8 @@ export class HeroCarousel {
       <div class="carousel-indicators absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
         ${this.slides.map((_, index) => `
           <button 
-            class="carousel-indicator w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? "bg-white scale-125" : "bg-white/60 hover:bg-white/80"}"
+            class="carousel-indicator w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? "scale-125" : "hover:bg-white/80"}"
+            style="background-color: ${index === 0 ? "#EF0000" : "rgba(255, 255, 255, 0.6)"};"
             data-slide-index="${index}"
             aria-label="Go to slide ${index + 1}"
           ></button>
@@ -186,11 +187,13 @@ export class HeroCarousel {
 
     // Update indicators
     if (this.indicators.length > 0) {
-      this.indicators[this.currentIndex].classList.remove("bg-white", "scale-125");
-      this.indicators[this.currentIndex].classList.add("bg-white/60");
+      // Deactivate current indicator
+      this.indicators[this.currentIndex].classList.remove("scale-125");
+      this.indicators[this.currentIndex].style.backgroundColor = "rgba(255, 255, 255, 0.6)";
 
-      this.indicators[index].classList.remove("bg-white/60");
-      this.indicators[index].classList.add("bg-white", "scale-125");
+      // Activate new indicator
+      this.indicators[index].classList.add("scale-125");
+      this.indicators[index].style.backgroundColor = "#EF0000";
     }
 
     this.currentIndex = index;

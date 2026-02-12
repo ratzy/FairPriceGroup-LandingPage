@@ -117,6 +117,43 @@ p, span, a, button, input, textarea, select {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
+/* Mobile: Full width overlay at bottom */
+@media (max-width: 1023px) {
+  .hero-overlay {
+    align-items: flex-end;
+  }
+  
+  .hero-content-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .hero-content-inner {
+    border-radius: 0;
+    margin: 0;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Desktop: Overlay on right side with rounded corners */
+@media (min-width: 1024px) {
+  .hero-overlay {
+    align-items: center;
+  }
+  
+  .hero-content-box {
+    width: auto;
+    max-width: 500px;
+    margin-left: auto;
+  }
+  
+  .hero-content-inner {
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 2.5rem;
+  }
+}
+
 /* Ensure buttons are interactive */
 .hero-content-inner button {
   cursor: pointer;
@@ -152,6 +189,7 @@ p, span, a, button, input, textarea, select {
   padding: 0;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .carousel-indicator:hover {
@@ -161,6 +199,11 @@ p, span, a, button, input, textarea, select {
 .carousel-indicator:focus-visible {
   outline: 2px solid white;
   outline-offset: 3px;
+}
+
+/* Active indicator - Red color */
+.carousel-indicator.scale-125 {
+  background-color: #EF0000 !important;
 }
 
 /* Legacy hero styles (kept for backward compatibility) */
