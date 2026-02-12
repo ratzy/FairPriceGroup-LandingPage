@@ -5,12 +5,21 @@ Place the following images in this directory:
 ## Header Logo
 1. **FPriceG-logo.png** - FairPrice Group logo for the header
 
-## Hero Carousel Images (Backgrounds Only)
-2. **hero-C1.png** - Hero carousel image 1 (background only, no text)
-3. **hero-C2.png** - Hero carousel image 2 (optional)
-4. **hero-C3.png** - Hero carousel image 3 (optional)
+## Hero Carousel Images (Responsive Images)
 
-The carousel will automatically use all available hero images (hero-C1.png, hero-C2.png, etc.)
+### Desktop Images (≥ 1024px)
+2. **hero-C1.png** - Hero carousel desktop image 1 (landscape, ~1920x600px)
+3. **hero-C2.png** - Hero carousel desktop image 2 (landscape, ~1920x600px)
+4. **hero-C3.png** - Hero carousel desktop image 3 (landscape, ~1920x600px)
+
+### Mobile Images (< 1024px)
+5. **mobile-bg-1.png** - Hero carousel mobile image 1 (portrait/square, ~800x800px)
+6. **mobile-bg-2.png** - Hero carousel mobile image 2 (portrait/square, ~800x800px)
+7. **mobile-bg-3.png** - Hero carousel mobile image 3 (portrait/square, ~800x800px)
+
+**Note**: The carousel uses `<picture>` element for responsive image switching:
+- Mobile/Tablet (< 1024px): mobile-bg-*.png images
+- Desktop (≥ 1024px): hero-C*.png images
 
 ## Benefits Section Icons
 5. **icon-practical.png** - Shopping cart with heart icon
