@@ -93,19 +93,25 @@ export function renderOccasionTabs(target, occasions) {
       ${occasions
         .map(
           (occasion) => `
-        <article class="occasion-card group relative overflow-hidden transition-all hover:-translate-y-1">
+        <a 
+          href="${escapeHTML(occasion.url || '#')}" 
+          class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:shadow-xl hover:-translate-y-1 block"
+          aria-label="View ${escapeHTML(occasion.label)} gift cards"
+        >
           <!-- Card Image -->
           <div class="occasion-card-image relative aspect-[4/3] overflow-hidden">
             <img 
               src="./src/assets/images/${escapeHTML(occasion.image)}" 
               alt="${escapeHTML(occasion.label)}"
-              class="h-full w-full object-cover transition-transform duration-300"
+              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
           
           <!-- Card Label -->
+          <div class="occasion-card-label bg-white px-4 py-3 text-center">
             <p class="text-sm font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
-        </article>
+          </div>
+        </a>
       `,
         )
         .join("")}
