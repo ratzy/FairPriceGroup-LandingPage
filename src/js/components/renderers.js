@@ -232,27 +232,46 @@ export function renderStepTabs(target, tabs, options = {}) {
 
 function renderPhysicalColumn(column) {
   return `
-    <article class="surface-card p-5 md:p-6">
-      <div class="flex items-center gap-3">
-        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-soft text-brand-dark">
-          ${getIcon(column.icon)}
-        </span>
-        <h3 class="text-lg font-bold text-brand-dark">${escapeHTML(column.title)}</h3>
+    <article class="physical-column text-center">
+      <!-- Icon and Title -->
+      <div class="mb-6">
+        <div class="inline-block mb-4">
+          <img 
+            src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
+            alt="${escapeHTML(column.title)}"
+            class="w-20 h-20 object-contain"
+          />
+        </div>
+        <h3 class="text-xl font-bold text-brand-dark">${escapeHTML(column.title)}</h3>
       </div>
-      <ol class="mt-4 space-y-3 text-sm leading-6 text-muted">
+      
+      <!-- Steps -->
+      <ol class="space-y-4 text-left mb-8">
         ${column.steps
           .map(
             (step, stepIndex) => `
-            <li class="flex gap-3">
-              <span class="mt-1 inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-slate-100 px-2 text-xs font-bold text-brand-dark">
-                ${stepIndex + 1}
-              </span>
+            <li class="flex gap-3 text-sm leading-relaxed text-slate-700">
+              <span class="font-bold text-brand-dark shrink-0">Step ${stepIndex + 1}:</span>
               <span>${escapeHTML(step)}</span>
             </li>
           `,
           )
           .join("")}
       </ol>
+      
+      <!-- CTA Button -->
+      ${
+        column.buttonText
+          ? `
+      <a 
+        href="${escapeHTML(column.buttonLink || "#")}"
+        class="inline-block border-2 border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+      >
+        ${escapeHTML(column.buttonText)}
+      </a>
+      `
+          : ""
+      }
     </article>
   `;
 }
@@ -275,9 +294,10 @@ export function renderPhysicalTabs(target, tabs, options = {}) {
         aria-controls="${escapeHTML(tab.id)}-panel"
         data-tab-button
         data-tab-target="${escapeHTML(tab.id)}-panel"
-        class="tab-button px-4 py-2 text-sm font-semibold"
+        class="physical-tab-button relative px-6 py-3 text-base font-semibold transition-colors"
       >
         ${escapeHTML(tab.label)}
+        <span class="tab-underline absolute bottom-0 left-0 right-0 h-1 bg-brand transition-opacity"></span>
       </button>
     `,
     )
@@ -294,7 +314,7 @@ export function renderPhysicalTabs(target, tabs, options = {}) {
         class="tab-panel"
         ${index !== 0 ? "hidden" : ""}
       >
-        <div class="grid gap-4 md:grid-cols-2">
+        <div class="grid gap-12 md:grid-cols-2 mt-12 max-w-4xl mx-auto">
           ${tab.columns.map((column) => renderPhysicalColumn(column)).join("")}
         </div>
       </div>
@@ -303,11 +323,17 @@ export function renderPhysicalTabs(target, tabs, options = {}) {
     .join("");
 
   target.innerHTML = `
-    <section class="tabs-shell" data-tabs>
-      <div role="tablist" aria-label="${escapeHTML(ariaLabel)}" class="flex flex-wrap justify-center gap-3">
+    <section class="physical-tabs-section" data-tabs>
+      <div
+        role="tablist"
+        aria-label="${escapeHTML(ariaLabel)}"
+        class="flex justify-center gap-8 border-b-2 border-slate-200"
+      >
         ${tabButtons}
       </div>
-      <div class="mt-6">${tabPanels}</div>
+      <div class="mt-8">
+        ${tabPanels}
+      </div>
     </section>
   `;
 }

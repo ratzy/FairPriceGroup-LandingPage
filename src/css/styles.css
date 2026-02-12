@@ -427,3 +427,38 @@ p, span, a, button, input, textarea, select {
     width: 8rem;
   }
 }
+
+/* Physical Tabs Section Styles */
+.physical-tabs-section .physical-tab-button {
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgb(var(--color-muted));
+  transition: color 0.3s ease;
+}
+
+.physical-tab-button:hover {
+  color: rgb(var(--color-brand-dark));
+}
+
+.physical-tab-button[aria-selected="true"] {
+  color: rgb(var(--color-brand-dark));
+}
+
+.physical-tab-button[aria-selected="true"] .tab-underline {
+  opacity: 1;
+}
+
+.physical-tab-button:not([aria-selected="true"]) .tab-underline {
+  opacity: 0;
+}
+
+/* Physical Column Styles */
+.physical-column {
+  padding: 1rem;
+}
+
+.physical-column img {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}

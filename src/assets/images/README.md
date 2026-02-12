@@ -46,3 +46,9 @@ These images are used in the "Gifting made practical, easy and meaningful" secti
 23. **egift-view-step3.png** - Mobile phone for "How to view" Step 3
 
 These images are used in the "All you need to know about eGift Cards" section with circular light blue backgrounds.
+
+## Physical Gift Cards Section Images
+24. **icon-store.png** - Store/shop icon for Personal orders
+25. **icon-briefcase.png** - Briefcase icon for Corporate orders
+
+These icons are used in the "All you need to know about Physical Gift Cards" section.
