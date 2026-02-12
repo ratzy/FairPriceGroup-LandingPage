@@ -186,10 +186,10 @@ export function renderStepTabs(target, tabs, options = {}) {
         aria-controls="${escapeHTML(tab.id)}-panel"
         data-tab-button
         data-tab-target="${escapeHTML(tab.id)}-panel"
-        class="egift-tab-button relative px-6 py-3 text-base font-semibold transition-colors ${index === 0 ? "text-brand-dark" : "text-slate-500 hover:text-brand-dark"}"
+        class="egift-tab-button relative px-6 py-3 text-base font-semibold transition-colors"
       >
         ${escapeHTML(tab.label)}
-        ${index === 0 ? '<span class="tab-underline absolute bottom-0 left-0 right-0 h-1 bg-brand"></span>' : ""}
+        <span class="tab-underline absolute bottom-0 left-0 right-0 h-1 bg-brand transition-opacity"></span>
       </button>
     `,
     )

@@ -376,6 +376,12 @@ p, span, a, button, input, textarea, select {
   border: none;
   background: none;
   cursor: pointer;
+  color: rgb(var(--color-muted));
+  transition: color 0.3s ease;
+}
+
+.egift-tab-button:hover {
+  color: rgb(var(--color-brand-dark));
 }
 
 .egift-tab-button[aria-selected="true"] {
@@ -383,11 +389,11 @@ p, span, a, button, input, textarea, select {
 }
 
 .egift-tab-button[aria-selected="true"] .tab-underline {
-  display: block;
+  opacity: 1;
 }
 
 .egift-tab-button:not([aria-selected="true"]) .tab-underline {
-  display: none;
+  opacity: 0;
 }
 
 .tab-underline {
@@ -397,6 +403,7 @@ p, span, a, button, input, textarea, select {
   right: 0;
   height: 4px;
   background: rgb(var(--color-brand));
+  transition: opacity 0.3s ease;
 }
 
 /* eGift Step Cards */
