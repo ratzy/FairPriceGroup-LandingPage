@@ -95,7 +95,7 @@ export function renderOccasionTabs(target, occasions) {
           (occasion) => `
         <a 
           href="${escapeHTML(occasion.url || '#')}" 
-          class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:-translate-y-1 block"
+          target="_blank" class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:-translate-y-1 block"
           aria-label="View ${escapeHTML(occasion.label)} gift cards"
         >
           <!-- Card Image -->
@@ -154,7 +154,7 @@ export function renderDeliveryCards(target, cards) {
           </ul>
           
           <a href='https://uatfairpricegcm.woohoo.sg/'
-            type="button"
+            type="button" target="_blank"
             class="inline-block mt-8 border border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
           >
             ${escapeHTML(card.action)}
@@ -285,7 +285,7 @@ function renderPhysicalColumn(column, tabType) {
             ? `
         <a 
           href="${escapeHTML(column.buttonLink || "#")}"
-          class="border border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          target="_blank" class="border border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
         >
           ${escapeHTML(column.buttonText)}
         </a>

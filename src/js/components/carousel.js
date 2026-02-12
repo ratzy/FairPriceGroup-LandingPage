@@ -56,18 +56,18 @@ export class HeroCarousel {
               
               <!-- CTA Buttons -->
               <div class="mt-5 flex flex-col gap-3 sm:flex-row xl:mt-6">
-                <button
-                  class="bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                <a href="https://uatfairpricegcm.woohoo.sg/" target="_blank"
+                  class="inline-block bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#egift'"
                 >
                   Send Personal eGift
-                </button>
-                <button
-                  class="border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                </a>
+                <a href="https://uatfairpricecorp.woohoo.sg/" target="_blank"
+                  class="inline-block border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#corporate-cards'"
                 >
                   Corporate Gifting
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ export class HeroCarousel {
     return `
       <!-- Previous/Next Buttons -->
       <button 
-        class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 transition shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+        class="carousel-prev absolute left-4 top-1/2  z-20 bg-white/90 hover:bg-white p-3 transition shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
         aria-label="Previous slide"
       >
         <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,7 +121,7 @@ export class HeroCarousel {
         </svg>
       </button>
       <button 
-        class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 transition shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+        class="carousel-next absolute right-4 top-1/2 z-20 bg-white/90 hover:bg-white p-3 transition shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
         aria-label="Next slide"
       >
         <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
