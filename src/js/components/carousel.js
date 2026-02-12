@@ -31,17 +31,20 @@ export class HeroCarousel {
           ${this.slides.map((slide, index) => this.renderSlide(slide, index)).join("")}
         </div>
         
+        <!-- Dark Gradient Overlay (Mobile) -->
+        <div class="hero-gradient-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent lg:hidden z-[5]"></div>
+        
         <!-- Coded Overlay Content (NOT an image) -->
-        <div class="hero-overlay absolute inset-0 flex items-end lg:items-center pointer-events-none">
+        <div class="hero-overlay absolute inset-0 flex items-end lg:items-center pointer-events-none z-10">
           <div class="hero-content-box w-full lg:w-auto lg:max-w-[500px] lg:ml-auto pointer-events-auto">
-            <div class="hero-content-inner bg-brand p-6 text-white md:p-10 lg:m-8 lg:rounded-2xl shadow-2xl">
+            <div class="hero-content-inner p-6 text-white md:p-8 lg:p-10 lg:m-8 lg:bg-brand lg:rounded-2xl lg:shadow-2xl">
               <!-- Eyebrow Text -->
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/70 md:text-sm">
+              <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/80 md:text-sm">
                 FairPrice Gift Cards
               </p>
               
               <!-- Main Heading -->
-              <h1 class="mt-3 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-[2.75rem]">
+              <h1 class="mt-3 text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl">
                 Everyday gifting,<br />made a little better
               </h1>
               
