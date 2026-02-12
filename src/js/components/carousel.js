@@ -55,7 +55,7 @@ export class HeroCarousel {
               </p>
               
               <!-- CTA Buttons -->
-              <div class="mt-5 flex flex-col gap-3 sm:flex-row xl:mt-6">
+              <div class="mt-5 hero-action-wrapper flex flex-col gap-3 sm:flex-row xl:mt-6">
                 <a href="https://uatfairpricegcm.woohoo.sg/" target="_blank"
                   class="inline-block bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#egift'"
