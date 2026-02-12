@@ -63,3 +63,12 @@ These images are used in the "All you need to know about eGift Cards" section wi
 30. **physical-view-step3.png** - Mobile screen showing "Check Balance" button
 
 These images are used in the "All you need to know about Physical Gift Cards" section.
+
+## Brand Logos (Accepted in-store and online section)
+31. **logo-fairprice.png** - FairPrice logo with red swoosh
+32. **logo-fairprice-finest.png** - FairPrice finest logo with orange text
+33. **logo-fairprice-xtra.png** - FairPrice Xtra logo with red X
+34. **logo-fairprice-shop.png** - FairPrice Shop logo with red text
+35. **logo-unity.png** - Unity logo in purple
+
+These logos are displayed in the "Accepted in-store and online" section.

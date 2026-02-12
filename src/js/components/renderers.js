@@ -432,13 +432,17 @@ export function renderBrands(target, brands) {
   }
 
   target.innerHTML = `
-    <div class="flex flex-wrap items-center justify-center gap-3">
+    <div class="brands-strip flex flex-wrap items-center justify-center gap-8 lg:gap-12">
       ${brands
         .map(
           (brand) => `
-          <span class="inline-flex min-h-10 items-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-brand-dark">
-            ${escapeHTML(brand)}
-          </span>
+          <div class="brand-logo-item">
+            <img 
+              src="./src/assets/images/${typeof brand === 'string' ? brand.toLowerCase().replace(/\s+/g, '-') + '.png' : escapeHTML(brand.logo)}" 
+              alt="${typeof brand === 'string' ? escapeHTML(brand) : escapeHTML(brand.alt)}"
+              class="h-8 md:h-10 object-contain"
+            />
+          </div>
         `,
         )
         .join("")}

@@ -499,3 +499,24 @@ p, span, a, button, input, textarea, select {
     height: 16rem;
   }
 }
+
+/* Brands Strip Section */
+.brands-strip {
+  padding: 1rem 0;
+}
+
+.brand-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-item img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.brand-logo-item img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}

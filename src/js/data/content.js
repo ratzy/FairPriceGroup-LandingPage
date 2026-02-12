@@ -228,11 +228,31 @@ export const landingContent = {
     },
   ],
   brands: [
-    "FairPrice",
-    "FairPrice Finest",
-    "FairPrice Xtra",
-    "FairPrice Shop",
-    "Unity",
+    {
+      name: "FairPrice",
+      logo: "logo-fairprice.png",
+      alt: "FairPrice Logo"
+    },
+    {
+      name: "FairPrice Finest",
+      logo: "logo-fairprice-finest.png",
+      alt: "FairPrice Finest Logo"
+    },
+    {
+      name: "FairPrice Xtra",
+      logo: "logo-fairprice-xtra.png",
+      alt: "FairPrice Xtra Logo"
+    },
+    {
+      name: "FairPrice Shop",
+      logo: "logo-fairprice-shop.png",
+      alt: "FairPrice Shop Logo"
+    },
+    {
+      name: "Unity",
+      logo: "logo-unity.png",
+      alt: "Unity Logo"
+    },
   ],
   faq: [
     {
