@@ -31,31 +31,31 @@ export class HeroCarousel {
           ${this.slides.map((slide, index) => this.renderSlide(slide, index)).join("")}
         </div>
         
-        <!-- Dark Gradient Overlay (Mobile) -->
-        <div class="hero-gradient-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent lg:hidden z-[5]"></div>
+        <!-- Dark Gradient Overlay (≤1024px only) -->
+        <div class="hero-gradient-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent xl:hidden z-[5]"></div>
         
         <!-- Coded Overlay Content (NOT an image) -->
-        <div class="hero-overlay absolute inset-0 flex items-end lg:items-center pointer-events-none z-10">
-          <div class="hero-content-box w-full lg:w-auto lg:max-w-[500px] lg:ml-auto pointer-events-auto">
-            <div class="hero-content-inner p-6 text-white md:p-8 lg:p-10 lg:m-8 lg:bg-brand lg:rounded-2xl lg:shadow-2xl">
+        <div class="hero-overlay absolute inset-0 flex items-end xl:items-center pointer-events-none z-10">
+          <div class="hero-content-box w-full xl:w-auto xl:max-w-[540px] xl:ml-auto pointer-events-auto">
+            <div class="hero-content-inner p-6 pb-20 text-white md:p-8 md:pb-20 xl:p-12 xl:m-8 xl:bg-brand xl:rounded-2xl xl:shadow-2xl">
               <!-- Eyebrow Text -->
-              <p class="text-xs font-bold uppercase tracking-[0.2em] text-white/80 md:text-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 md:text-sm xl:text-white/80">
                 FairPrice Gift Cards
               </p>
               
               <!-- Main Heading -->
-              <h1 class="mt-3 text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl">
+              <h1 class="mt-2 text-2xl font-bold leading-tight text-white md:text-3xl xl:text-4xl xl:leading-snug">
                 Everyday gifting,<br />made a little better
               </h1>
               
               <!-- Description -->
-              <p class="mt-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p class="mt-3 text-sm leading-relaxed text-white/90 md:text-base xl:mt-4">
                 For anyone who deserves a little cheer, from colleagues to clients or friends. 
                 Pick a design, choose a value, and make someone's day today.
               </p>
               
               <!-- CTA Buttons -->
-              <div class="mt-6 flex flex-wrap gap-3">
+              <div class="mt-5 flex flex-col gap-3 sm:flex-row xl:mt-6">
                 <button
                   class="bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#egift'"
