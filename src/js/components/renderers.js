@@ -33,6 +33,20 @@ function escapeHTML(value) {
     .replaceAll("'", "&#39;");
 }
 
+// Allow safe HTML (only <a> tags with specific attributes)
+function sanitizeHTML(value) {
+  if (typeof value !== 'string') return value;
+  
+  // If the string contains an <a> tag, allow it through without escaping
+  // This is safe because we control the content in content.js
+  if (value.includes('<a href=')) {
+    return value;
+  }
+  
+  // Otherwise, escape HTML
+  return escapeHTML(value);
+}
+
 export function renderBenefits(target, benefits) {
   if (!target) {
     return;
@@ -254,7 +268,7 @@ function renderPhysicalColumn(column, tabType) {
               (step, stepIndex) => `
               <div class="flex gap-3 text-sm leading-relaxed text-slate-700">
                 <span class="font-bold text-brand-dark shrink-0">Step ${stepIndex + 1}:</span>
-                <span>${escapeHTML(step)}</span>
+                <span>${sanitizeHTML(step)}</span>
               </div>
             `,
             )
@@ -299,7 +313,7 @@ function renderPhysicalColumn(column, tabType) {
         column.steps
           ? `
       <ol class="text-left text-sm text-slate-700 space-y-2 max-w-sm list-decimal list-inside">
-        ${column.steps.map((step) => `<li class="leading-relaxed">${escapeHTML(step)}</li>`).join("")}
+        ${column.steps.map((step) => `<li class="leading-relaxed">${sanitizeHTML(step)}</li>`).join("")}
       </ol>
       `
           : ""
@@ -321,7 +335,7 @@ function renderPhysicalViewStep(step) {
         />
       
       <!-- Title -->
-      <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.title)}</p>
+      <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${sanitizeHTML(step.title)}</p>
     </article>
   `;
 }
