@@ -19,7 +19,10 @@
 *::after {
   box-sizing: border-box;
 }
-
+/* Rewrite Tailwind */
+.text-3xl{
+  font-size: 1.7rem;
+}
 body {
   margin: 0;
   font-family: var(--font-museo);
@@ -335,12 +338,10 @@ p, span, a, button, input, textarea, select {
   text-decoration: none;
   display: block;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .occasion-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
 }
 

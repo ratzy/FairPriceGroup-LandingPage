@@ -55,7 +55,7 @@ export function renderBenefits(target, benefits) {
   target.innerHTML = benefits
     .map(
       (benefit, index) => `
-      <article class="benefit-card relative rounded-2xl border-2 border-brand-dark/10 bg-white px-6 py-8 text-center transition-all hover:border-brand/30 hover:shadow-lg">
+      <article class="benefit-card relative rounded-2xl border border-brand-dark/10 bg-white px-6 py-8 text-center transition-all hover:border-brand/30 hover:shadow-lg">
         <!-- Number Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
           <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark text-base font-bold text-white">
@@ -95,7 +95,7 @@ export function renderOccasionTabs(target, occasions) {
           (occasion) => `
         <a 
           href="${escapeHTML(occasion.url || '#')}" 
-          class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:shadow-xl hover:-translate-y-1 block"
+          class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:-translate-y-1 block"
           aria-label="View ${escapeHTML(occasion.label)} gift cards"
         >
           <!-- Card Image -->
@@ -108,9 +108,7 @@ export function renderOccasionTabs(target, occasions) {
           </div>
           
           <!-- Card Label -->
-          <div class="occasion-card-label bg-white px-4 py-3 text-center">
-            <p class="text-sm font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
-          </div>
+            <p class="text-sm font-semibold text-center text-brand-dark">${escapeHTML(occasion.label)}</p>
         </a>
       `,
         )
@@ -155,12 +153,12 @@ export function renderDeliveryCards(target, cards) {
               .join("")}
           </ul>
           
-          <button
+          <a href='https://uatfairpricegcm.woohoo.sg/'
             type="button"
-            class="mt-8 border-2 border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
+            class="inline-block mt-8 border border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
           >
             ${escapeHTML(card.action)}
-          </button>
+          </a>
         </div>
       </article>
     `,
@@ -287,7 +285,7 @@ function renderPhysicalColumn(column, tabType) {
             ? `
         <a 
           href="${escapeHTML(column.buttonLink || "#")}"
-          class="border-2 border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          class="border border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
         >
           ${escapeHTML(column.buttonText)}
         </a>
