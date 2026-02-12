@@ -471,3 +471,31 @@ p, span, a, button, input, textarea, select {
 .physical-step-card .space-y-4 > * + * {
   margin-top: 1rem;
 }
+
+/* Physical Use Cards (How to use tab) */
+.physical-use-card {
+  padding: 1rem;
+}
+
+.physical-use-card .rounded-full {
+  background-color: #D4EFF7;
+}
+
+/* Physical View Steps (How to view tab) */
+.physical-view-step {
+  padding: 1rem;
+}
+
+.physical-view-step .step-circle {
+  background-color: #D4EFF7;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .physical-view-step .step-circle {
+    width: 16rem;
+    height: 16rem;
+  }
+}

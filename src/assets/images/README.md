@@ -48,7 +48,18 @@ These images are used in the "Gifting made practical, easy and meaningful" secti
 These images are used in the "All you need to know about eGift Cards" section with circular light blue backgrounds.
 
 ## Physical Gift Cards Section Images
+
+### How to order tab
 24. **icon-store.png** - Store/shop icon for Personal orders
 25. **icon-briefcase.png** - Briefcase icon for Corporate orders
 
-These icons are used in the "All you need to know about Physical Gift Cards" section.
+### How to use tab
+26. **physical-use-instore.png** - Gift card with barcode in rounded square
+27. **physical-use-digital.png** - Mobile phone with gift cards showing app integration
+
+### How to view tab
+28. **physical-view-step1.png** - Mobile/document showing validity check
+29. **physical-view-step2.png** - Gift card with barcode showing 16-digit number
+30. **physical-view-step3.png** - Mobile screen showing "Check Balance" button
+
+These images are used in the "All you need to know about Physical Gift Cards" section.

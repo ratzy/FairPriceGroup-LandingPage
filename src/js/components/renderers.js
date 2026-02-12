@@ -230,46 +230,105 @@ export function renderStepTabs(target, tabs, options = {}) {
   `;
 }
 
-function renderPhysicalColumn(column) {
+function renderPhysicalColumn(column, tabType) {
+  // Two-column layout with steps (How to order)
+  if (column.steps && !tabType.includes("image")) {
+    return `
+      <article class="physical-step-card relative flex flex-col items-center text-center">
+        <!-- Icon -->
+        <div class="mb-6">
+          <img 
+            src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
+            alt="${escapeHTML(column.title)}"
+            class="w-20 h-20 object-contain"
+          />
+        </div>
+        
+        <!-- Title -->
+        <h3 class="text-xl font-bold text-brand-dark mb-6">${escapeHTML(column.title)}</h3>
+        
+        <!-- Steps -->
+        <div class="space-y-4 text-left mb-8 w-full max-w-sm">
+          ${column.steps
+            .map(
+              (step, stepIndex) => `
+              <div class="flex gap-3 text-sm leading-relaxed text-slate-700">
+                <span class="font-bold text-brand-dark shrink-0">Step ${stepIndex + 1}:</span>
+                <span>${escapeHTML(step)}</span>
+              </div>
+            `,
+            )
+            .join("")}
+        </div>
+        
+        <!-- CTA Button -->
+        ${
+          column.buttonText
+            ? `
+        <a 
+          href="${escapeHTML(column.buttonLink || "#")}"
+          class="border-2 border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+        >
+          ${escapeHTML(column.buttonText)}
+        </a>
+        `
+            : ""
+        }
+      </article>
+    `;
+  }
+  
+  // Two-column layout with image (How to use)
   return `
-    <article class="physical-step-card relative flex flex-col items-center text-center">
-      <!-- Icon -->
+    <article class="physical-use-card relative flex flex-col items-center text-center">
+      <!-- Image with circular background -->
+      <div class="mb-6 flex items-center justify-center w-64 h-64 rounded-full bg-[#D4EFF7]">
         <img 
           src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
           alt="${escapeHTML(column.title)}"
-          class="flex items-center justify-center mb- object-contain"
+          class="max-w-[70%] max-h-[70%] object-contain"
         />
-      
-      <!-- Title -->
-      <h3 class="text-xl font-bold text-brand-dark mb-6">${escapeHTML(column.title)}</h3>
-      
-      <!-- Steps -->
-      <div class="space-y-4 text-left mb-8 w-full max-w-sm">
-        ${column.steps
-          .map(
-            (step, stepIndex) => `
-            <div class="flex gap-3 text-sm leading-relaxed text-slate-700">
-              <span class="font-bold text-brand-dark shrink-0">Step ${stepIndex + 1}:</span>
-              <span>${escapeHTML(step)}</span>
-            </div>
-          `,
-          )
-          .join("")}
       </div>
       
-      <!-- CTA Button -->
+      <!-- Title -->
+      <h3 class="text-lg font-bold text-brand-dark mb-3">${escapeHTML(column.title)}</h3>
+      
+      <!-- Description -->
+      <p class="text-sm text-slate-700 mb-4 max-w-sm">${escapeHTML(column.description)}</p>
+      
+      <!-- Steps (if any) -->
       ${
-        column.buttonText
+        column.steps
           ? `
-      <a 
-        href="${escapeHTML(column.buttonLink || "#")}"
-        class="border-2 border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-      >
-        ${escapeHTML(column.buttonText)}
-      </a>
+      <ol class="text-left text-sm text-slate-700 space-y-2 max-w-sm list-decimal list-inside">
+        ${column.steps.map((step) => `<li class="leading-relaxed">${escapeHTML(step)}</li>`).join("")}
+      </ol>
       `
           : ""
       }
+    </article>
+  `;
+}
+
+function renderPhysicalViewStep(step) {
+  return `
+    <article class="physical-view-step relative flex flex-col items-center text-center">
+      <!-- Step Badge (Coded) -->
+      <div class="step-badge bg-brand-dark text-white px-6 py-2.5 rounded-lg font-bold text-sm uppercase mb-6">
+        Step ${escapeHTML(step.step)}
+      </div>
+      
+      <!-- Circular Background with Image -->
+      <div class="step-circle relative flex items-center justify-center w-64 h-64 rounded-full bg-[#D4EFF7] mb-6">
+        <img 
+          src="./src/assets/images/${escapeHTML(step.image)}" 
+          alt="${escapeHTML(step.title)}"
+          class="max-w-[70%] max-h-[70%] object-contain"
+        />
+      </div>
+      
+      <!-- Title -->
+      <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.title)}</p>
     </article>
   `;
 }
@@ -303,20 +362,44 @@ export function renderPhysicalTabs(target, tabs, options = {}) {
 
   const tabPanels = tabs
     .map(
-      (tab, index) => `
-      <div
-        id="${escapeHTML(tab.id)}-panel"
-        role="tabpanel"
-        aria-labelledby="${escapeHTML(tab.id)}-tab"
-        data-tab-panel
-        class="tab-panel"
-        ${index !== 0 ? "hidden" : ""}
-      >
-        <div class="grid gap-12 md:grid-cols-2 mt-12 max-w-4xl mx-auto">
-          ${tab.columns.map((column) => renderPhysicalColumn(column)).join("")}
-        </div>
-      </div>
-    `,
+      (tab, index) => {
+        // Handle three-steps layout (How to view)
+        if (tab.type === "three-steps") {
+          return `
+            <div
+              id="${escapeHTML(tab.id)}-panel"
+              role="tabpanel"
+              aria-labelledby="${escapeHTML(tab.id)}-tab"
+              data-tab-panel
+              class="tab-panel"
+              ${index !== 0 ? "hidden" : ""}
+            >
+              <div class="grid gap-12 md:grid-cols-3 mt-12">
+                ${tab.steps.map((step) => renderPhysicalViewStep(step)).join("")}
+              </div>
+            </div>
+          `;
+        }
+        
+        // Handle two-column layouts (How to order, How to use)
+        const gridCols = tab.type === "two-column-image" ? "md:grid-cols-2" : "md:grid-cols-2";
+        const maxWidth = tab.type === "two-column-image" ? "" : "max-w-4xl mx-auto";
+        
+        return `
+          <div
+            id="${escapeHTML(tab.id)}-panel"
+            role="tabpanel"
+            aria-labelledby="${escapeHTML(tab.id)}-tab"
+            data-tab-panel
+            class="tab-panel"
+            ${index !== 0 ? "hidden" : ""}
+          >
+            <div class="grid gap-12 ${gridCols} mt-12 ${maxWidth}">
+              ${tab.columns.map((column) => renderPhysicalColumn(column, tab.type || "")).join("")}
+            </div>
+          </div>
+        `;
+      }
     )
     .join("");
 

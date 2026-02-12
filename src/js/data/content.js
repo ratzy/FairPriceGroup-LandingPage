@@ -185,23 +185,21 @@ export const landingContent = {
     {
       id: "physical-use",
       label: "How to use",
+      type: "two-column-image",
       columns: [
         {
-          title: "In-store redemption",
-          icon: "bag",
-          steps: [
-            "Present your card at any participating FairPrice checkout.",
-            "Cashier deducts purchase amount from your card balance.",
-            "Keep card for future purchases until value is fully redeemed.",
-          ],
+          title: "In stores",
+          iconImage: "physical-use-instore.png",
+          description: "Scan gift card barcode at the cashier or self-checkout",
         },
         {
-          title: "Corporate distribution",
-          icon: "team",
+          title: "For digital payments",
+          iconImage: "physical-use-digital.png",
+          description: "Add gift card to your FairPrice Group app:",
           steps: [
-            "Distribute cards as employee rewards or event gift packs.",
-            "Assign card values by campaign, department or participant list.",
-            "Track total issued cards through your corporate order records.",
+            "Scratch foil on the back of gift card to show barcode",
+            "On the app, tap 'Scan' and scan the barcode",
+            "The gift card will be added into Vouchers",
           ],
         },
       ],
@@ -209,24 +207,22 @@ export const landingContent = {
     {
       id: "physical-view",
       label: "How to view",
-      columns: [
+      type: "three-steps",
+      steps: [
         {
-          title: "Balance enquiry",
-          icon: "balance",
-          steps: [
-            "Check card balance at customer service counters in-store.",
-            "Use available self-service tools where supported.",
-            "Review remaining value after each successful redemption.",
-          ],
+          step: "1",
+          title: "Visit here to view the gift card validity",
+          image: "physical-view-step1.png",
         },
         {
-          title: "Support and updates",
-          icon: "help",
-          steps: [
-            "Contact customer support for card assistance and expiry details.",
-            "Corporate buyers can request consolidated redemption support.",
-            "Keep purchase records for replacement and verification workflows.",
-          ],
+          step: "2",
+          title: "Key in your 16-digit card number located at the back of your gift card",
+          image: "physical-view-step2.png",
+        },
+        {
+          step: "3",
+          title: "Tap 'Check Balance' to view your balance",
+          image: "physical-view-step3.png",
         },
       ],
     },
