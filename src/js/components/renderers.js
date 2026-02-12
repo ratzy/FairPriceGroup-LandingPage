@@ -282,13 +282,11 @@ function renderPhysicalColumn(column, tabType) {
   return `
     <article class="physical-use-card relative flex flex-col items-center text-center">
       <!-- Image with circular background -->
-      <div class="mb-6 flex items-center justify-center w-64 h-64 rounded-full bg-[#D4EFF7]">
-        <img 
+      <img 
           src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
           alt="${escapeHTML(column.title)}"
-          class="max-w-[70%] max-h-[70%] object-contain"
+          class="flex items-center justify-center mb- object-contain"
         />
-      </div>
       
       <!-- Title -->
       <h3 class="text-lg font-bold text-brand-dark mb-3">${escapeHTML(column.title)}</h3>
@@ -314,18 +312,13 @@ function renderPhysicalViewStep(step) {
   return `
     <article class="physical-view-step relative flex flex-col items-center text-center">
       <!-- Step Badge (Coded) -->
-      <div class="step-badge bg-brand-dark text-white px-6 py-2.5 rounded-lg font-bold text-sm uppercase mb-6">
-        Step ${escapeHTML(step.step)}
-      </div>
       
       <!-- Circular Background with Image -->
-      <div class="step-circle relative flex items-center justify-center w-64 h-64 rounded-full bg-[#D4EFF7] mb-6">
-        <img 
+      <img 
           src="./src/assets/images/${escapeHTML(step.image)}" 
           alt="${escapeHTML(step.title)}"
-          class="max-w-[70%] max-h-[70%] object-contain"
+          class="flex items-center justify-center mb- object-contain"
         />
-      </div>
       
       <!-- Title -->
       <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.title)}</p>

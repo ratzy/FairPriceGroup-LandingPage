@@ -418,12 +418,12 @@ p, span, a, button, input, textarea, select {
   letter-spacing: 0.05em;
 }
 
-.egift-step-card img, .physical-step-card img {
+.egift-step-card img, .physical-use-card img, .physical-view-step img {
   width: 10rem;
 }
 
 @media (max-width: 768px) {
-  .egift-step-card img, .physical-step-card img {
+  .egift-step-card img, .physical-use-card img, .physical-view-step img {
     width: 8rem;
   }
 }
