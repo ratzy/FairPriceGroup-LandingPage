@@ -89,30 +89,54 @@ export function renderOccasionTabs(target, occasions) {
   }
 
   target.innerHTML = `
-    <div class="occasion-cards-grid grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
-      ${occasions
-        .map(
-          (occasion) => `
-        <a 
-          href="${escapeHTML(occasion.url || '#')}" 
-          target="_blank" class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:-translate-y-1 block"
-          aria-label="View ${escapeHTML(occasion.label)} gift cards"
-        >
-          <!-- Card Image -->
-          <div class="occasion-card-image relative aspect-[4/3] overflow-hidden">
-            <img 
-              src="./src/assets/images/${escapeHTML(occasion.image)}" 
-              alt="${escapeHTML(occasion.label)}"
-              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-          
-          <!-- Card Label -->
-            <p class="text-sm font-semibold text-center text-brand-dark">${escapeHTML(occasion.label)}</p>
-        </a>
-      `,
-        )
-        .join("")}
+    <!-- Occasions Carousel Container -->
+    <div class="occasions-wrapper">
+      <!-- Cards Container - Scrollable on mobile, grid on desktop -->
+      <div class="occasion-cards-container">
+        <div class="occasion-cards-grid">
+          ${occasions
+            .map(
+              (occasion) => `
+            <a 
+              href="${escapeHTML(occasion.url || '#')}" 
+              target="_blank" 
+              class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:shadow-xl block"
+              aria-label="View ${escapeHTML(occasion.label)} gift cards"
+            >
+              <!-- Card Image -->
+              <div class="occasion-card-image relative aspect-[4/3] overflow-hidden">
+                <img 
+                  src="./src/assets/images/${escapeHTML(occasion.image)}" 
+                  alt="${escapeHTML(occasion.label)}"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              
+              <!-- Card Label -->
+              <div class="occasion-card-label bg-white py-3 text-center">
+                <p class="text-sm font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
+              </div>
+            </a>
+          `,
+            )
+            .join("")}
+        </div>
+      </div>
+      
+      <!-- Carousel Indicators (Mobile only) -->
+      <div class="occasion-indicators xl:hidden flex justify-center gap-2 mt-6">
+        ${occasions
+          .map(
+            (_, index) => `
+          <button 
+            class="occasion-indicator w-3 h-3 rounded-full transition-all ${index === 0 ? "bg-[#EF0000] scale-125" : "bg-gray-300"}"
+            data-occasion-index="${index}"
+            aria-label="Go to occasion ${index + 1}"
+          ></button>
+        `,
+          )
+          .join("")}
+      </div>
     </div>
   `;
 }
