@@ -85,6 +85,9 @@ export class HeroCarousel {
   }
 
   renderSlide(slide, index) {
+    const desktopImage = slide.desktopImage || slide.image;
+    const mobileImage = slide.mobileImage || slide.image;
+    
     return `
       <div 
         class="hero-slide absolute inset-0 transition-opacity duration-700 ${index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"}"
@@ -92,13 +95,16 @@ export class HeroCarousel {
         role="img"
         aria-label="${slide.alt || `Hero slide ${index + 1}`}"
       >
-        <!-- Background Image Only (No overlay text in image) -->
-        <img 
-          src="${slide.image}" 
-          alt=""
-          class="w-full h-full object-cover select-none"
-          draggable="false"
-        />
+        <!-- Mobile Image (< 1024px) -->
+        <picture>
+          <source media="(min-width: 1024px)" srcset="${desktopImage}">
+          <img 
+            src="${mobileImage}" 
+            alt=""
+            class="w-full h-full object-cover select-none"
+            draggable="false"
+          />
+        </picture>
       </div>
     `;
   }

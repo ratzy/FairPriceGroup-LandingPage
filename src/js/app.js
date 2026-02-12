@@ -25,18 +25,21 @@ function initHeroCarousel() {
   
   if (!carouselContainer) return;
 
-  // Define carousel slides
+  // Define carousel slides with responsive images
   const slides = [
     {
-      image: "./src/assets/images/hero-C1.png",
+      desktopImage: "./src/assets/images/hero-C1.png",
+      mobileImage: "./src/assets/images/mobile-bg-1.png",
       alt: "FairPrice Gift Cards - Everyday gifting made better",
     },
     {
-      image: "./src/assets/images/hero-C2.png",
+      desktopImage: "./src/assets/images/hero-C2.png",
+      mobileImage: "./src/assets/images/mobile-bg-2.png",
       alt: "FairPrice Gift Cards - Corporate Gifting Solutions",
     },
     {
-      image: "./src/assets/images/hero-C3.png",
+      desktopImage: "./src/assets/images/hero-C3.png",
+      mobileImage: "./src/assets/images/mobile-bg-3.png",
       alt: "FairPrice Gift Cards - Perfect for every occasion",
     },
   ];
