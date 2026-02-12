@@ -570,8 +570,8 @@ p, span, a, button, input, textarea, select {
   }
   
   .occasion-card {
-    flex: 0 0 calc(50% - 0.5rem);
-    min-width: calc(50% - 0.5rem);
+    flex: 0 0 calc(45% - 0.5rem);
+    min-width: calc(45% - 0.5rem);
     scroll-snap-align: start;
   }
 }
@@ -581,6 +581,7 @@ p, span, a, button, input, textarea, select {
   .occasion-cards-grid {
     display: grid !important;
     grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1.5rem;
   }
   
   .occasion-indicators {
@@ -595,6 +596,7 @@ p, span, a, button, input, textarea, select {
   align-items: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
+  display: none !important;
 }
 
 .occasion-indicator {

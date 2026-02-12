@@ -100,7 +100,7 @@ export function renderOccasionTabs(target, occasions) {
             <a 
               href="${escapeHTML(occasion.url || '#')}" 
               target="_blank" 
-              class="occasion-card group relative overflow-hidden rounded-2xl transition-all hover:shadow-xl block"
+              class="occasion-card group relative overflow-hidden rounded-2xl transition-all block"
               aria-label="View ${escapeHTML(occasion.label)} gift cards"
             >
               <!-- Card Image -->
@@ -113,9 +113,7 @@ export function renderOccasionTabs(target, occasions) {
               </div>
               
               <!-- Card Label -->
-              <div class="occasion-card-label bg-white py-3 text-center">
-                <p class="text-sm font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
-              </div>
+                <p class="text-sm pt-2 text-center font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
             </a>
           `,
             )
