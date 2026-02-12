@@ -332,22 +332,45 @@ p, span, a, button, input, textarea, select {
 }
 
 .occasion-card {
+  text-decoration: none;
+  display: block;
   cursor: pointer;
-  text-align: center;
-}
-.occasion-card p{
-  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
-.occasion-card-image{
-  border-radius: 10px;
+.occasion-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
 }
+
+.occasion-card:focus-visible {
+  outline: 2px solid rgb(var(--color-brand));
+  outline-offset: 2px;
+}
+
+.occasion-card-image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .occasion-card-image img {
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.occasion-card:hover .occasion-card-image img {
+  transform: scale(1.05);
 }
 
 .occasion-card-label {
   border-top: 1px solid rgb(226 232 240);
+  background: white;
+  text-align: center;
+}
+
+.occasion-card-label p {
+  margin-top: 0;
 }
 
 /* Delivery Cards Section Styles */
