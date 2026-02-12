@@ -10,6 +10,7 @@ import {
 } from "./components/renderers.js";
 import { initTabs } from "./components/tabs.js";
 import { HeroCarousel } from "./components/carousel.js";
+import { OccasionsCarousel } from "./components/occasions-carousel.js";
 import { landingContent } from "./data/content.js";
 
 function setCurrentYear() {
@@ -53,6 +54,17 @@ function initHeroCarousel() {
   return carousel;
 }
 
+function initOccasionsCarousel() {
+  const occasionsContainer = document.querySelector("#occasion-tabs");
+  
+  if (!occasionsContainer) return;
+  
+  // Initialize occasions carousel (for mobile indicator functionality)
+  const occasionsCarousel = new OccasionsCarousel(occasionsContainer);
+  
+  return occasionsCarousel;
+}
+
 function initLandingPage() {
   // Initialize hero carousel
   initHeroCarousel();
@@ -60,6 +72,10 @@ function initLandingPage() {
   // Initialize other components
   renderBenefits(document.querySelector("#benefits-grid"), landingContent.benefits);
   renderOccasionTabs(document.querySelector("#occasion-tabs"), landingContent.occasions);
+  
+  // Initialize occasions carousel after rendering
+  initOccasionsCarousel();
+  
   renderDeliveryCards(document.querySelector("#delivery-cards"), landingContent.deliveryCards);
   renderStepTabs(document.querySelector("#egift-knowledge-tabs"), landingContent.eGiftTabs, {
     ariaLabel: "eGift card information",
