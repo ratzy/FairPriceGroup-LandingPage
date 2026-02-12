@@ -234,13 +234,11 @@ function renderPhysicalColumn(column) {
   return `
     <article class="physical-step-card relative flex flex-col items-center text-center">
       <!-- Icon -->
-      <div class="mb-6">
         <img 
           src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
           alt="${escapeHTML(column.title)}"
-          class="w-20 h-20 object-contain"
+          class="flex items-center justify-center mb- object-contain"
         />
-      </div>
       
       <!-- Title -->
       <h3 class="text-xl font-bold text-brand-dark mb-6">${escapeHTML(column.title)}</h3>
