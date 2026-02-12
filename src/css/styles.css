@@ -544,7 +544,80 @@ p, span, a, button, input, textarea, select {
 }
 
 .occasion-card-label p {
-  margin-top: 0;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+/* Mobile/Tablet - Horizontal carousel (≤1024px) */
+@media (max-width: 1024px) {
+  .occasion-cards-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .occasion-cards-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .occasion-cards-grid {
+    display: flex !important;
+    gap: 1rem;
+    padding: 0.5rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .occasion-card {
+    flex: 0 0 calc(50% - 0.5rem);
+    min-width: calc(50% - 0.5rem);
+    scroll-snap-align: start;
+  }
+}
+
+/* Desktop - Grid layout (>1024px) */
+@media (min-width: 1025px) {
+  .occasion-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .occasion-indicators {
+    display: none !important;
+  }
+}
+
+/* Occasion Indicators (Mobile only) */
+.occasion-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.occasion-indicator {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #D1D5DB;
+  transition: all 0.3s ease;
+}
+
+.occasion-indicator:hover {
+  background-color: #9CA3AF;
+}
+
+.occasion-indicator.bg-\[\#EF0000\] {
+  background-color: #EF0000 !important;
+}
+
+.occasion-indicator.scale-125 {
+  transform: scale(1.25);
 }
 
 /* Delivery Cards Section Styles */
