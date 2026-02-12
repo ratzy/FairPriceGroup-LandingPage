@@ -454,11 +454,20 @@ p, span, a, button, input, textarea, select {
   opacity: 0;
 }
 
-/* Physical Column Styles */
-.physical-column {
+/* Physical Step Cards - Same structure as eGift */
+.physical-step-card {
   padding: 1rem;
 }
 
-.physical-column img {
+.physical-step-card img {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.physical-step-card h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.physical-step-card .space-y-4 > * + * {
+  margin-top: 1rem;
 }

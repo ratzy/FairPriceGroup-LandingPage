@@ -232,32 +232,32 @@ export function renderStepTabs(target, tabs, options = {}) {
 
 function renderPhysicalColumn(column) {
   return `
-    <article class="physical-column text-center">
-      <!-- Icon and Title -->
+    <article class="physical-step-card relative flex flex-col items-center text-center">
+      <!-- Icon -->
       <div class="mb-6">
-        <div class="inline-block mb-4">
-          <img 
-            src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
-            alt="${escapeHTML(column.title)}"
-            class="w-20 h-20 object-contain"
-          />
-        </div>
-        <h3 class="text-xl font-bold text-brand-dark">${escapeHTML(column.title)}</h3>
+        <img 
+          src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
+          alt="${escapeHTML(column.title)}"
+          class="w-20 h-20 object-contain"
+        />
       </div>
       
+      <!-- Title -->
+      <h3 class="text-xl font-bold text-brand-dark mb-6">${escapeHTML(column.title)}</h3>
+      
       <!-- Steps -->
-      <ol class="space-y-4 text-left mb-8">
+      <div class="space-y-4 text-left mb-8 w-full max-w-sm">
         ${column.steps
           .map(
             (step, stepIndex) => `
-            <li class="flex gap-3 text-sm leading-relaxed text-slate-700">
+            <div class="flex gap-3 text-sm leading-relaxed text-slate-700">
               <span class="font-bold text-brand-dark shrink-0">Step ${stepIndex + 1}:</span>
               <span>${escapeHTML(step)}</span>
-            </li>
+            </div>
           `,
           )
           .join("")}
-      </ol>
+      </div>
       
       <!-- CTA Button -->
       ${
@@ -265,7 +265,7 @@ function renderPhysicalColumn(column) {
           ? `
       <a 
         href="${escapeHTML(column.buttonLink || "#")}"
-        class="inline-block border-2 border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+        class="border-2 border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
       >
         ${escapeHTML(column.buttonText)}
       </a>
