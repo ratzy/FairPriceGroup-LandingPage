@@ -202,9 +202,11 @@ function renderStepCard(step) {
         />
       
       <!-- Title and Description -->
-      <h3 class="text-xl font-bold text-brand-dark mb-3">${escapeHTML(step.title)}</h3>
-      <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.description)}</p>
-    </article>
+        <div class="content-wrapper">
+          <h3 class="text-xl font-bold text-brand-dark mb-3">${escapeHTML(step.title)}</h3>
+          <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.description)}</p>
+        </div>
+      </article>
   `;
 }
 

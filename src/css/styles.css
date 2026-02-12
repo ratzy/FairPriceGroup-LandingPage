@@ -699,6 +699,24 @@ p, span, a, button, input, textarea, select {
     width: 8rem;
   }
 }
+@media (max-width: 1023px) {
+  .egift-step-card{
+    flex-direction: row!important;
+    gap: 1.5rem;
+  }
+  .egift-step-card .content-wrapper{
+    text-align: left;
+  }
+  .egift-tabs-section .gap-8, .physical-tabs-section .gap-8{
+    gap: 1rem;
+  }
+  .egift-tabs-section .gap-12, .physical-tabs-section .gap-12{
+    gap: 1rem;
+  }
+  footer{
+    padding-bottom: 9.5rem !important;
+  }
+}
 
 /* Physical Tabs Section Styles */
 .physical-tabs-section .physical-tab-button {
