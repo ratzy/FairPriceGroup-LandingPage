@@ -495,10 +495,10 @@ export function renderFaq(target, items) {
                   type="button"
                   data-accordion-trigger
                   aria-expanded="false"
-                  class="faq-trigger flex w-full items-center justify-between gap-3 border-b border-transparent px-5 py-4 text-left text-sm font-semibold text-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset"
+                  class="faq-trigger flex w-full items-center gap-3 border-b border-transparent px-5 py-4 text-left text-sm font-semibold text-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset"
                 >
+                <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand">></span>
                   <span>${escapeHTML(item.question)}</span>
-                  <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand">+</span>
                 </button>
               </h3>
               <div data-accordion-panel class="accordion-panel px-5 pb-5 pt-5 text-sm leading-6 text-muted" hidden>

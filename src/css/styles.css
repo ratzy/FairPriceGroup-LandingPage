@@ -547,7 +547,7 @@ p, span, a, button, input, textarea, select {
 }
 
 .faq-trigger[aria-expanded="true"] .faq-icon {
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
 .faq-icon {
