@@ -92,11 +92,13 @@ body {
   }
   
   .countdown-item > div:first-child {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.2;
   }
   
   .countdown-strip h3 {
-    font-size: 1rem;
+    font-size: .85rem;
+    line-height: 1.2;
   }
 }
 
@@ -238,8 +240,11 @@ p, span, a, button, input, textarea, select {
 
 /* Mobile - Full width overlay with dark gradient background (< 1024px) */
 @media (max-width: 1023px) {
+  .h-content-wrapper{
+    justify-content: center;
+  }
   .hero-overlay {
-    align-items: flex-end;
+    align-items:flex-start;
     justify-content: center;
   }
   
