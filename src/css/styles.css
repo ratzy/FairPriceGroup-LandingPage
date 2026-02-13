@@ -2,6 +2,7 @@
   --color-brand: 0 87 163;
   --color-brand-dark: 2 51 93;
   --color-brand-soft: 233 244 252;
+  --color-brand-selection: 217 42 28;
   --color-ink: 15 23 42;
   --color-muted: 100 116 139;
   --color-accent: 255 193 7;
@@ -743,7 +744,7 @@ p, span, a, button, input, textarea, select {
   left: 0;
   right: 0;
   height: 4px;
-  background: rgb(var(--color-brand));
+  background: rgb(var(--color-brand-selection));
   transition: opacity 0.3s ease;
 }
 
