@@ -11,6 +11,7 @@ import {
 import { initTabs } from "./components/tabs.js";
 import { HeroCarousel } from "./components/carousel.js";
 import { OccasionsCarousel } from "./components/occasions-carousel.js";
+import { CountdownTimer } from "./components/countdown.js";
 import { landingContent } from "./data/content.js";
 
 function setCurrentYear() {
@@ -65,7 +66,20 @@ function initOccasionsCarousel() {
   return occasionsCarousel;
 }
 
+function initCountdown() {
+  // Initialize countdown timer
+  const countdown = new CountdownTimer({
+    // Optional: Set specific end time
+    // endTime: new Date('2026-02-20T23:59:59')
+  });
+  
+  return countdown;
+}
+
 function initLandingPage() {
+  // Initialize countdown timer
+  initCountdown();
+  
   // Initialize hero carousel
   initHeroCarousel();
   

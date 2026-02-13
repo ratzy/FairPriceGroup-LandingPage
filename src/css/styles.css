@@ -30,6 +30,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Marquee Strip */
+.marquee-strip {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Countdown Strip */
+.countdown-strip {
+  position: relative;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.countdown-item {
+  min-width: 3rem;
+}
+
+.countdown-item > div:first-child {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .countdown-timer {
+    gap: 0.75rem;
+  }
+  
+  .countdown-item {
+    min-width: 2.5rem;
+  }
+  
+  .countdown-item > div:first-child {
+    font-size: 1.25rem;
+  }
+  
+  .countdown-strip h3 {
+    font-size: 1rem;
+  }
+}
+
 /* Typography - Museo Sans for all text */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-museo);
