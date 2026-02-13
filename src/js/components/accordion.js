@@ -26,18 +26,15 @@ function wireAccordion(container) {
     return;
   }
 
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     const trigger = item.querySelector("[data-accordion-trigger]");
 
     if (!trigger) {
       return;
     }
 
-    if (index === 0) {
-      setItemState(item, true);
-    } else {
-      setItemState(item, false);
-    }
+    // All items start collapsed (no default expansion)
+    setItemState(item, false);
 
     trigger.addEventListener("click", () => {
       const isExpanded = trigger.getAttribute("aria-expanded") === "true";

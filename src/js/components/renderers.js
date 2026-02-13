@@ -494,16 +494,14 @@ export function renderFaq(target, items) {
                 <button
                   type="button"
                   data-accordion-trigger
-                  aria-expanded="${index === 0 ? "true" : "false"}"
+                  aria-expanded="false"
                   class="faq-trigger flex w-full items-center justify-between gap-3 border-b border-transparent px-5 py-4 text-left text-sm font-semibold text-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset"
                 >
                   <span>${escapeHTML(item.question)}</span>
                   <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand">+</span>
                 </button>
               </h3>
-              <div data-accordion-panel class="accordion-panel px-5 pb-5 text-sm leading-6 text-muted" ${
-                index !== 0 ? "hidden" : ""
-              }>
+              <div data-accordion-panel class="accordion-panel px-5 pb-5 text-sm leading-6 text-muted" hidden>
                 ${escapeHTML(item.answer)}
               </div>
             </article>
