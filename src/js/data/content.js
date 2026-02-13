@@ -178,7 +178,7 @@ export const landingContent = {
           icon: "building",
           iconImage: "icon-briefcase.png",
           steps: [
-            'Submit your request via <a href="#" class="text-brand hover:underline font-semibold">the online pre-order portal</a>. Our team will respond within 2-3 working days',
+            'Submit your request via <a href="#" target="_blank" class="text-brand hover:underline font-semibold">the online pre-order portal</a>. Our team will respond within 2-3 working days',
             "Pay via credit card or bank transfer",
             "Arrange collection or delivery (min. spend applies)",
           ],
@@ -216,7 +216,7 @@ export const landingContent = {
       steps: [
         {
           step: "1",
-          title: 'Visit <a href="#" class="text-brand hover:underline font-semibold">here</a> to view the gift card validity',
+          title: 'Visit <a href="#" target="_blank" class="text-brand hover:underline font-semibold">here</a> to view the gift card validity',
           image: "physical-view-step1.png",
         },
         {

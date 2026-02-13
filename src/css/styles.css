@@ -714,8 +714,15 @@ p, span, a, button, input, textarea, select {
     gap: 1rem;
   }
   footer{
-    padding-bottom: 9.5rem !important;
+    padding-bottom: 9.5gt rem !important;
   }
+}
+footer{
+  text-align: center;
+  background-color: #003070;
+}
+footer a{
+  text-decoration: underline;
 }
 
 /* Physical Tabs Section Styles */
@@ -791,6 +798,9 @@ p, span, a, button, input, textarea, select {
 }
 
 /* Brands Strip Section */
+.brand-logo-block{
+  background-color:#F9FAFB;
+}
 .brands-strip {
   padding: 1rem 0;
 }
