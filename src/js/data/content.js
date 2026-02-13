@@ -171,7 +171,7 @@ export const landingContent = {
             "Make payment and collect on the spot",
           ],
           buttonText: "Locate us",
-          buttonLink: "#",
+          buttonLink: "https://www.fairprice.com.sg/store-locator",
         },
         {
           title: "Corporate orders",
@@ -183,7 +183,7 @@ export const landingContent = {
             "Arrange collection or delivery (min. spend applies)",
           ],
           buttonText: "Gift cards pre-order",
-          buttonLink: "#",
+          buttonLink: "https://uatfairpricecorp.woohoo.sg/",
         },
       ],
     },
@@ -261,29 +261,29 @@ export const landingContent = {
   ],
   faq: [
     {
-      question: "What are FairPrice Group Gift Cards?",
+      question: "What are FairPrice Group eGift Cards?",
       answer:
-        "FairPrice Gift Cards are prepaid cards available in digital and physical formats, redeemable for groceries and daily essentials at participating FairPrice Group brands.",
+        "They are digital value cards that make gifting easy and meaningful. Your recipient can use them across FairPrice stores*, online at FairPrice, and Unity pharmacies, choosing what they truly need or want. It's a simple, thoughtful way to give something practical for any occasion. *Except FairPrice Xpress",
     },
     {
-      question: "Where can I redeem FairPrice Gift Cards?",
+      question: "Where can I buy FairPrice Group eGift Cards?",
       answer:
-        "Gift cards can be redeemed at participating FairPrice stores and selected channels. Redemption coverage depends on the card type and campaign setup.",
+        "You can buy them online. Choose 'Personal' if you are buying one for yourself or as a gift, or 'Corporate' if you are purchasing in bulk or on behalf of your company.",
     },
     {
-      question: "Can I include a personal message with eGift Cards?",
+      question: "What are the available payment methods for purchasing eGift Cards?",
       answer:
-        "Yes. You can personalize eGift Cards with a recipient name and custom message before checkout.",
+        "We accept payments via credit/debit cards and PayNow. For corporate orders, bank transfer is also available.",
     },
     {
-      question: "Are there volume discounts for corporate purchases?",
+      question: "How will my recipient receive their eGift Card?",
       answer:
-        "Corporate gifting packages can be tailored by order quantity and campaign needs. Contact the corporate team for current options and timelines.",
+        "<strong>For personal eGift cards:</strong> Your recipient will receive an email containing their eGift Card and your personalised message once your payment is confirmed. <strong>For corporate eGift cards:</strong> You will receive a downloadable Excel or CSV file with the eGift Card links, ready for you to share with your team or clients. To redeem, simply scan the QR code for in-store use or enter the eGift Card code from your eGift Card link during online checkout. <br/> Pro tip: Save your eGift Card in the FairPrice Group app for easy access and seamless redemption.",
     },
     {
-      question: "How do I check the remaining card balance?",
+      question: "How do I check my eGift Card balance?",
       answer:
-        "For eGift Cards, balance can be viewed from the card link. For physical cards, balance can be checked at participating customer service counters and available support channels.",
+        "Tap the eGift Card link in your email to view your balance. If you have saved it to your FairPrice Group app, you can find it under 'Vouchers' > select 'eGift Cards'.",
     },
   ],
 };

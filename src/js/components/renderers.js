@@ -501,7 +501,7 @@ export function renderFaq(target, items) {
                   <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand">+</span>
                 </button>
               </h3>
-              <div data-accordion-panel class="accordion-panel px-5 pb-5 text-sm leading-6 text-muted" hidden>
+              <div data-accordion-panel class="accordion-panel px-5 pb-5 pt-5 text-sm leading-6 text-muted" hidden>
                 ${escapeHTML(item.answer)}
               </div>
             </article>
