@@ -286,4 +286,4 @@ export const landingContent = {
         "Tap the eGift Card link in your email to view your balance. If you have saved it to your FairPrice Group app, you can find it under 'Vouchers' > select 'eGift Cards'.",
     },
   ],
-};
+}
