@@ -57,11 +57,9 @@ export function renderBenefits(target, benefits) {
       (benefit, index) => `
       <article class="benefit-card relative rounded-2xl border border-brand-dark/10 bg-white px-6 py-8 text-center transition-all hover:border-brand/30 hover:shadow-lg">
         <!-- Number Badge -->
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-          <div class="flex h-8 w-8 items-center justify-center rounded-full bg-brand-dark text-base font-bold text-white">
+          <div class="item-badge flex h-8 w-8 items-center justify-center text-base font-bold">
             ${index + 1}
           </div>
-        </div>
         
         <!-- Icon -->
         <div class="mx-auto mt-4 mb-6 flex h-24 w-24 items-center justify-center">
@@ -76,7 +74,7 @@ export function renderBenefits(target, benefits) {
         <h3 class="mb-3 text-xl font-bold text-brand-dark">${escapeHTML(benefit.title)}</h3>
         
         <!-- Description -->
-        <p class="text-sm leading-relaxed text-muted">${escapeHTML(benefit.description)}</p>
+        <p class="">${escapeHTML(benefit.description)}</p>
       </article>
     `,
     )
@@ -108,12 +106,12 @@ export function renderOccasionTabs(target, occasions) {
                 <img 
                   src="./src/assets/images/${escapeHTML(occasion.image)}" 
                   alt="${escapeHTML(occasion.label)}"
-                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  class="h-full w-full object-fill transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               
               <!-- Card Label -->
-                <p class="text-sm pt-2 text-center font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
+                <p class="text-sm pt-4 text-center font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
             </a>
           `,
             )
@@ -158,11 +156,11 @@ export function renderDeliveryCards(target, cards) {
         </div>
         
         <!-- Card Content -->
-        <div class="p-8 bg-[#FFFFFF] content-wrapper rounded-2xl">
-          <h3 class="text-2xl font-bold text-brand-dark">${escapeHTML(card.title)}</h3>
-          <p class="mt-2 text-base font-semibold text-slate-900">${escapeHTML(card.description)}</p>
+        <div class="p-8 bg-[#FFFFFF] text-center content-wrapper rounded-2xl">
+          <h3 class="text-2xl text-center font-bold text-brand-dark">${escapeHTML(card.title)}</h3>
+          <p class="mt-2 text-center text-base font-semibold text-slate-900">${escapeHTML(card.description)}</p>
           
-          <ul class="mt-6 space-y-3 text-sm text-slate-700">
+          <ul class="mt-6 text-left space-y-3 text-sm text-slate-700">
             ${card.bullets
               .map(
                 (bullet) => `
@@ -175,7 +173,7 @@ export function renderDeliveryCards(target, cards) {
               .join("")}
           </ul>
           
-          <a href='https://uatfairpricegcm.woohoo.sg/'
+          <a href='${escapeHTML(card.url)}'
             type="button" target="_blank"
             class="inline-block mt-8 border border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
           >

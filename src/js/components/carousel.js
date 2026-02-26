@@ -35,9 +35,9 @@ export class HeroCarousel {
         <div class="hero-gradient-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent xl:hidden z-[5]"></div>
         
         <!-- Coded Overlay Content (NOT an image) -->
-        <div class="hero-overlay absolute inset-0 flex items-end xl:items-center pointer-events-none z-10">
-          <div class="hero-content-box w-full xl:w-auto xl:max-w-[540px] xl:ml-auto pointer-events-auto">
-            <div class="hero-content-inner p-6 pb-20 text-white md:p-8 md:pb-20 xl:p-12 xl:m-8 xl:bg-brand xl:rounded-2xl xl:shadow-2xl">
+        <div class="hero-overlay absolute inset-0 flex items-center pointer-events-none z-10">
+          <div class="hero-content-box w-full xl:w-auto xl:max-w-[520px] xl:ml-auto pointer-events-auto">
+            <div class="hero-content-inner p-6 pb-20 text-white md:p-8 xl:p-12 xl:m-8 xl:bg-brand xl:rounded-2xl xl:shadow-2xl">
               <!-- Eyebrow Text -->
               <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 md:text-sm xl:text-white/80">
                 FairPrice Gift Cards
@@ -55,7 +55,7 @@ export class HeroCarousel {
               </p>
               
               <!-- CTA Buttons -->
-              <div class="mt-5 hero-action-wrapper flex flex-col gap-3 sm:flex-row xl:mt-6">
+              <div class="mt-5 hero-action-wrapper flex flex-row gap-3 sm:flex-row xl:mt-6">
                 <a href="https://uatfairpricegcm.woohoo.sg/" target="_blank"
                   class="inline-block bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#egift'"
@@ -111,24 +111,6 @@ export class HeroCarousel {
 
   renderControls() {
     return `
-      <!-- Previous/Next Buttons -->
-      <button 
-        class="carousel-prev absolute left-4 top-1/2  z-20 bg-white/90 hover:bg-white p-3 transition shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-        aria-label="Previous slide"
-      >
-        <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button 
-        class="carousel-next absolute right-4 top-1/2 z-20 bg-white/90 hover:bg-white p-3 transition shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
-        aria-label="Next slide"
-      >
-        <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
       <!-- Indicators - Bottom of carousel -->
       <div class="carousel-indicators absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2.5">
         ${this.slides.map((_, index) => `

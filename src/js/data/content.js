@@ -68,6 +68,7 @@ export const landingContent = {
         "The thoughtful gift for every need, from a simple thank you to major milestones and celebrations",
       ],
       action: "Send eGift card",
+      url:"https://uatfairpricegcm.woohoo.sg/"
     },
     {
       title: "Physical Gift Cards",
@@ -80,6 +81,7 @@ export const landingContent = {
         "Great for everything from birthday gifts to corporate employee benefits",
       ],
       action: "Find a store",
+      url:"https://www.fairprice.com.sg/store-locator"
     },
   ],
   eGiftTabs: [
