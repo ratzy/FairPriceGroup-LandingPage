@@ -12,6 +12,7 @@
   --section-space: clamp(2.5rem, 8vw, 4.5rem);
   
   /* Typography */
+
   --font-museo: "Museo Sans", system-ui, -apple-system, sans-serif;
 }
 
