@@ -308,9 +308,9 @@ p, span, a, button, input, textarea, select {
     margin-top: 1rem;
   }
   
-  .hero-content-inner .flex {
+  .hero-content-inner .hero-action-wrapper {
     justify-content: center;
-    margin-top: 1.5rem;
+    display: none;
   }
   
   .hero-content-inner button {
@@ -845,7 +845,9 @@ p, span, a, button, input, textarea, select {
 .egift-step-card img, .physical-use-card img, .physical-view-step img {
   width: 10rem;
 }
-
+.mb-specific .hero-action-wrapper{
+  display: none;
+}
 @media (max-width: 768px) {
   .egift-step-card img, .physical-use-card img, .physical-view-step img {
     width: 8rem;
@@ -866,15 +868,34 @@ p, span, a, button, input, textarea, select {
     gap: 1rem;
   }
   footer{
-    padding-bottom: 7rem!important;
+    padding-bottom: 5rem!important;
   }
   .egift-tabs-section .egift-tab-button,
   .physical-tabs-section .physical-tab-button{
     font-size:.85rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  .egift-tabs-section .gap-8,
+  .physical-tabs-section .gap-8{
+    gap:.5rem;
+  }
+  .mb-specific .hero-action-wrapper{
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    padding: .8rem .5rem;
+    gap: .8rem;
+  }
+  .mb-specific .hero-action-wrapper a{
+    padding: .5rem 1rem;
+    font-size: .85rem;
+  }
+  .mb-specific .hero-action-wrapper a:first-child{
+    padding:.65rem 1rem .5rem 1rem;
   }
 }
+
 footer{
   text-align: center;
   background-color: #003070;
