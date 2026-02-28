@@ -826,7 +826,7 @@ p, span, a, button, input, textarea, select {
   left: 0;
   right: 0;
   height: 4px;
-  background: rgb(var(--color-brand-selection));
+  background: #D92A1C;
   transition: opacity 0.3s ease;
 }
 
@@ -866,7 +866,13 @@ p, span, a, button, input, textarea, select {
     gap: 1rem;
   }
   footer{
-    padding-bottom: 9.5gt rem !important;
+    padding-bottom: 7rem!important;
+  }
+  .egift-tabs-section .egift-tab-button,
+  .physical-tabs-section .physical-tab-button{
+    font-size:.85rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 footer{
