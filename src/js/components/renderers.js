@@ -57,9 +57,9 @@ export function renderBenefits(target, benefits) {
       (benefit, index) => `
       <article class="benefit-card relative rounded-2xl border border-brand-dark/10 bg-white px-6 py-8 text-center transition-all hover:border-brand/30 hover:shadow-lg">
         <!-- Number Badge -->
-          <div class="item-badge flex h-8 w-8 items-center justify-center text-base font-bold">
+          <span class="item-badge flex h-8 w-8 items-center justify-center text-base font-bold">
             ${index + 1}
-          </div>
+          </span>
         
         <!-- Icon -->
         <div class="mx-auto mt-4 mb-6 flex h-24 w-24 items-center justify-center">
@@ -69,12 +69,14 @@ export function renderBenefits(target, benefits) {
             class="h-full w-full object-contain"
           />
         </div>
-        
-        <!-- Title -->
-        <h3 class="mb-3 text-xl font-bold text-brand-dark">${escapeHTML(benefit.title)}</h3>
-        
-        <!-- Description -->
-        <p class="">${escapeHTML(benefit.description)}</p>
+        <div>
+          <!-- Title -->
+          <h3 class="mb-3 text-xl font-bold text-brand-dark"><span class="item-badge flex h-8 w-8 items-center justify-center text-base font-bold">
+          ${index + 1}</span> ${escapeHTML(benefit.title)}</h3>
+          
+          <!-- Description -->
+          <p class="">${escapeHTML(benefit.description)}</p>
+        </div>
       </article>
     `,
     )
@@ -111,7 +113,7 @@ export function renderOccasionTabs(target, occasions) {
               </div>
               
               <!-- Card Label -->
-                <p class="text-sm pt-4 text-center font-semibold text-brand-dark">${escapeHTML(occasion.label)}</p>
+                <p class="text-sm pt-4 text-center font-semibold">${escapeHTML(occasion.label)}</p>
             </a>
           `,
             )
@@ -158,7 +160,7 @@ export function renderDeliveryCards(target, cards) {
         <!-- Card Content -->
         <div class="p-8 bg-[#FFFFFF] text-center content-wrapper rounded-2xl">
           <h3 class="text-2xl text-center font-bold text-brand-dark">${escapeHTML(card.title)}</h3>
-          <p class="mt-2 text-center text-base font-semibold text-slate-900">${escapeHTML(card.description)}</p>
+          <p class="text-center text-base font-semibold text-slate-900">${escapeHTML(card.description)}</p>
           
           <ul class="mt-6 text-left space-y-3 text-sm text-slate-700">
             ${card.bullets
@@ -166,7 +168,7 @@ export function renderDeliveryCards(target, cards) {
                 (bullet) => `
                 <li class="flex gap-3 leading-relaxed">
                   <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-dark"></span>
-                  <span>${escapeHTML(bullet)}</span>
+                  <span class="text-base">${escapeHTML(bullet)}</span>
                 </li>
               `,
               )
@@ -201,7 +203,7 @@ function renderStepCard(step) {
       
       <!-- Title and Description -->
         <div class="content-wrapper">
-          <h3 class="text-xl font-bold text-brand-dark mb-3">${escapeHTML(step.title)}</h3>
+          <h3 class="text-base font-bold text-brand-dark mt-2">${escapeHTML(step.title)}</h3>
           <p class="text-sm leading-relaxed text-slate-700 max-w-xs">${escapeHTML(step.description)}</p>
         </div>
       </article>
@@ -226,10 +228,10 @@ export function renderStepTabs(target, tabs, options = {}) {
         aria-controls="${escapeHTML(tab.id)}-panel"
         data-tab-button
         data-tab-target="${escapeHTML(tab.id)}-panel"
-        class="egift-tab-button relative px-6 py-3 text-base font-semibold transition-colors"
+        class="egift-tab-button relative px-6 py-3 text-xl font-bold transition-colors"
       >
         ${escapeHTML(tab.label)}
-        <span class="tab-underline absolute bottom-0 left-0 right-0 h-1 bg-brand transition-opacity"></span>
+        <span class="tab-underline absolute bottom-0 left-0 right-0 h-1 transition-opacity"></span>
       </button>
     `,
     )
@@ -263,7 +265,7 @@ export function renderStepTabs(target, tabs, options = {}) {
       >
         ${tabButtons}
       </div>
-      <div class="mt-8">
+      <div class="mt-10">
         ${tabPanels}
       </div>
     </section>
@@ -276,7 +278,7 @@ function renderPhysicalColumn(column, tabType) {
     return `
       <article class="physical-step-card relative flex flex-col items-center text-center">
         <!-- Icon -->
-        <div class="mb-6">
+        <div class="mb-2">
           <img 
             src="./src/assets/images/${escapeHTML(column.iconImage || column.icon + ".png")}" 
             alt="${escapeHTML(column.title)}"
@@ -285,15 +287,15 @@ function renderPhysicalColumn(column, tabType) {
         </div>
         
         <!-- Title -->
-        <h3 class="text-xl font-bold text-brand-dark mb-6">${escapeHTML(column.title)}</h3>
+        <h3 class="text-xl font-bold text-brand-dark">${escapeHTML(column.title)}</h3>
         
         <!-- Steps -->
-        <div class="space-y-4 text-left mb-8 w-full max-w-sm">
+        <div class="space-y-4 text-left mb-3 w-full max-w-sm">
           ${column.steps
             .map(
               (step, stepIndex) => `
               <div class="flex gap-3 text-sm leading-relaxed text-slate-700">
-                <span class="font-bold text-brand-dark shrink-0">Step ${stepIndex + 1}:</span>
+                <span class="font-bold shrink-0">Step ${stepIndex + 1}:</span>
                 <span>${sanitizeHTML(step)}</span>
               </div>
             `,
@@ -384,10 +386,10 @@ export function renderPhysicalTabs(target, tabs, options = {}) {
         aria-controls="${escapeHTML(tab.id)}-panel"
         data-tab-button
         data-tab-target="${escapeHTML(tab.id)}-panel"
-        class="physical-tab-button relative px-6 py-3 text-base font-semibold transition-colors"
+        class="physical-tab-button relative px-6 py-3 text-xl font-semibold transition-colors"
       >
         ${escapeHTML(tab.label)}
-        <span class="tab-underline absolute bottom-0 left-0 right-0 h-1 bg-brand transition-opacity"></span>
+        <span class="tab-underline absolute bottom-0 left-0 right-0 h-1 transition-opacity"></span>
       </button>
     `,
     )
@@ -445,7 +447,7 @@ export function renderPhysicalTabs(target, tabs, options = {}) {
       >
         ${tabButtons}
       </div>
-      <div class="mt-8">
+      <div class="mt-10">
         ${tabPanels}
       </div>
     </section>
@@ -493,13 +495,13 @@ export function renderFaq(target, items) {
                   type="button"
                   data-accordion-trigger
                   aria-expanded="false"
-                  class="faq-trigger flex w-full items-center gap-3 border-b border-transparent px-5 py-4 text-left text-sm font-semibold text-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset"
+                  class="faq-trigger flex w-full items-center gap-3 border-b border-transparent px-5 py-5 text-left text-sm font-semibold text-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset"
                 >
                 <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand">></span>
                   <span>${escapeHTML(item.question)}</span>
                 </button>
               </h3>
-              <div data-accordion-panel class="accordion-panel px-5 pb-5 pt-5 text-sm leading-6 text-muted" hidden>
+              <div data-accordion-panel class="accordion-panel px-5 pb-5 pt-5 text-sm leading-6" hidden>
                 ${escapeHTML(item.answer)}
               </div>
             </article>

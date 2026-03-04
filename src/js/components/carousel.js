@@ -38,11 +38,7 @@ export class HeroCarousel {
         <div class="hero-overlay absolute inset-0 flex items-center pointer-events-none z-10">
           <div class="hero-content-box w-full xl:w-auto xl:max-w-[520px] xl:ml-auto pointer-events-auto">
             <div class="hero-content-inner p-6 pb-20 text-white md:p-8 xl:p-12 xl:m-8 xl:bg-brand xl:rounded-2xl xl:shadow-2xl">
-              <!-- Eyebrow Text -->
-              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70 md:text-sm xl:text-white/80">
-                FairPrice Gift Cards
-              </p>
-              
+            
               <!-- Main Heading -->
               <h1 class="mt-2 text-2xl font-bold leading-tight text-white md:text-3xl xl:text-4xl xl:leading-snug">
                 Everyday gifting,<br />made a little better
@@ -50,8 +46,8 @@ export class HeroCarousel {
               
               <!-- Description -->
               <p class="mt-3 text-sm leading-relaxed text-white/90 md:text-base xl:mt-4">
-                For anyone who deserves a little cheer, from colleagues to clients or friends. 
-                Pick a design, choose a value, and make someone's day today.
+              For anyone who deserves a little cheer, from colleagues to clients or friends. <br/><br/> For anyone who deserves a little cheer,
+              from colleagues to clients or friends.
               </p>
               
               <!-- CTA Buttons -->

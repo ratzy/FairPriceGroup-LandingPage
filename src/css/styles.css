@@ -50,6 +50,9 @@
 .text-3xl{
   font-size: 1.7rem;
 }
+.text-2xl{
+  font-size: 1.5rem;
+}
 body {
   margin: 0;
   font-family: var(--font-primary);
@@ -60,13 +63,21 @@ body {
 .bg-dark{
   background-color: #0A405A;
 }
+.mt-6{
+  margin-top:1.25rem !important;
+}
+.text-brand-dark{
+ color: #0A405A;
+}
 /* Marquee Strip */
 .marquee-strip {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-
+.marquee-strip .text-sm{
+  font-size: 12px; 
+}
 .marquee-content {
   display: flex;
   animation: marquee 30s linear infinite;
@@ -160,6 +171,15 @@ p, span, a, button, input, textarea, select {
   font-weight: 800;
   letter-spacing: 0.02em;
 }
+.border-brand{
+  border-color:#003070 !important;
+}
+.border-brand{
+  border-color:#003070 !important;
+}
+.text-brand{
+  color: #003070 !important;
+}
 
 /* Hero Carousel Styles */
 .hero-carousel-container {
@@ -252,8 +272,7 @@ p, span, a, button, input, textarea, select {
 }
 
 .hero-content-inner {
-  /* Blue overlay box - coded, not an image */
-  background: linear-gradient(135deg, rgb(var(--color-brand)) 0%, rgb(var(--color-brand-dark)) 100%);
+  background-color: #003071 !important;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -392,7 +411,6 @@ p, span, a, button, input, textarea, select {
   }
   
   .hero-content-inner {
-    background: linear-gradient(135deg, rgb(var(--color-brand)) 0%, rgb(var(--color-brand-dark)) 100%) !important;
     border-radius: 1rem;
     margin: 2rem;
     padding: 2.5rem;
@@ -622,6 +640,30 @@ p, span, a, button, input, textarea, select {
   background-color: rgb(var(--color-brand-soft));
   color: rgb(var(--color-brand-dark));
 }
+.faq-heading{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+.faq-heading img{
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+.faq-heading h2{
+  color: #0A405A;
+}
+.faq-section .surface-card span, .faq-section .accordion-panel{
+  color: #000000;
+}
+.faq-section .surface-card{
+  border-radius: 20px;
+}
+.faq-section.section-shell{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 .faq-trigger[aria-expanded="true"] {
   border-color: rgb(var(--color-brand));
@@ -653,8 +695,33 @@ p, span, a, button, input, textarea, select {
 .benefit-card img {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
-
+.benefit-card h3 .item-badge{
+  display:none;
+}
+.section-shell.benefits-section {
+  padding-top:20px;
+  padding-bottom:20px;
+}
+@media (max-width: 768px) { 
+  .benefit-card{
+    display: flex;
+    text-align: left;
+    gap: 2rem;
+    padding: 0;
+    border: none;
+  }
+  .benefit-card .item-badge{
+    display: none;
+  }
+  .benefit-card h3 .item-badge{
+    display:inline-block;
+  }
+}
 /* Occasions Section Styles */
+.occasions-section{
+  padding-top:60px;
+  padding-bottom: 30px;
+}
 .occasion-cards-grid {
   margin-top: 2rem;
 }
@@ -720,6 +787,9 @@ p, span, a, button, input, textarea, select {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
   }
+  .occasion-cards-grid p{
+    color: #111111;
+  }
   
   .occasion-card {
     flex: 0 0 calc(45% - 0.5rem);
@@ -775,6 +845,10 @@ p, span, a, button, input, textarea, select {
 }
 
 /* Delivery Cards Section Styles */
+.delivery-section.py-16, .egift-section, .pgift-section{
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
 .delivery-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -793,7 +867,15 @@ p, span, a, button, input, textarea, select {
 .delivery-card-image image {
     max-height: 300px;
 }
-
+.delivery-card h3{
+  font-size: 22px;
+}
+.deliver-card p{
+  font-size: 20px;
+}
+.delivery-card li span{
+  color: #111111;
+}
 /* eGift Tabs Section Styles */
 .egift-tabs-section .egift-tab-button {
   position: relative;
@@ -834,6 +916,14 @@ p, span, a, button, input, textarea, select {
 .egift-step-card {
   padding: 1rem;
 }
+.egift-step-card h3{
+  color:#212529;
+}
+.egift-step-card p, .physical-step-card span{
+  color:#111111;
+}
+
+
 
 .step-badge {
   background-color: rgb(var(--color-brand-dark));
@@ -848,12 +938,15 @@ p, span, a, button, input, textarea, select {
 .mb-specific .hero-action-wrapper{
   display: none;
 }
-@media (max-width: 768px) {
-  .egift-step-card img, .physical-use-card img, .physical-view-step img {
-    width: 8rem;
-  }
-}
+
 @media (max-width: 1023px) {
+  .text-3xl, .text-2xl{
+    font-size: 1.25rem !important;
+    line-height: 1.5rem !important;
+  }
+  .text-xl{
+    font-size: 1rem !important;
+  }
   .egift-step-card{
     flex-direction: row!important;
     gap: 1.5rem;
@@ -866,6 +959,9 @@ p, span, a, button, input, textarea, select {
   }
   .egift-tabs-section .gap-12, .physical-tabs-section .gap-12{
     gap: 1rem;
+  }
+  .egift-step-card img, .physical-use-card img, .physical-view-step img {
+    width: 6rem;
   }
   footer{
     padding-bottom: 5rem!important;
@@ -979,6 +1075,8 @@ footer a{
 /* Brands Strip Section */
 .brand-logo-block{
   background-color:#F9FAFB;
+  padding-top: 30px;
+  padding-bottom:30px;
 }
 .brands-strip {
   padding: 1rem 0;
