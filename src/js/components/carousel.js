@@ -32,7 +32,7 @@ export class HeroCarousel {
         </div>
         
         <!-- Dark Gradient Overlay (≤1024px only) -->
-        <div class="hero-gradient-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent xl:hidden z-[5]"></div>
+        <div class="hero-gradient-overlay absolute inset-0 xl:hidden z-[5]"></div>
         
         <!-- Coded Overlay Content (NOT an image) -->
         <div class="hero-overlay absolute inset-0 flex items-center pointer-events-none z-10">
@@ -46,8 +46,7 @@ export class HeroCarousel {
               
               <!-- Description -->
               <p class="mt-3 text-sm leading-relaxed text-white/90 md:text-base xl:mt-4">
-              For anyone who deserves a little cheer, from colleagues to clients or friends. <br/><br/> For anyone who deserves a little cheer,
-              from colleagues to clients or friends.
+              For anyone who deserves a little cheer, from colleagues to clients or friends. <br/><br/> Pick a design, choose a value, and make someone's day today.
               </p>
               
               <!-- CTA Buttons -->

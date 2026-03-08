@@ -69,10 +69,10 @@ export function renderBenefits(target, benefits) {
             class="h-full w-full object-contain"
           />
         </div>
-        <div>
+        <div class="content-wrapper">
           <!-- Title -->
           <h3 class="mb-3 text-xl font-bold text-brand-dark"><span class="item-badge flex h-8 w-8 items-center justify-center text-base font-bold">
-          ${index + 1}</span> ${escapeHTML(benefit.title)}</h3>
+          ${index + 1}.</span> ${escapeHTML(benefit.title)}</h3>
           
           <!-- Description -->
           <p class="">${escapeHTML(benefit.description)}</p>
@@ -127,7 +127,7 @@ export function renderOccasionTabs(target, occasions) {
           .map(
             (_, index) => `
           <button 
-            class="occasion-indicator w-3 h-3 rounded-full transition-all ${index === 0 ? "bg-[#EF0000] scale-125" : "bg-gray-300"}"
+            class="occasion-indicator w-3 h-3 rounded-full transition-all ${index === 0 ? "scale-125" : "bg-gray-300"}"
             data-occasion-index="${index}"
             aria-label="Go to occasion ${index + 1}"
           ></button>
@@ -329,7 +329,7 @@ function renderPhysicalColumn(column, tabType) {
           alt="${escapeHTML(column.title)}"
           class="flex items-center justify-center mb- object-contain"
         />
-      
+      <div class="content-wrapper">
       <!-- Title -->
       <h3 class="text-lg font-bold text-brand-dark mb-3">${escapeHTML(column.title)}</h3>
       
@@ -340,9 +340,10 @@ function renderPhysicalColumn(column, tabType) {
       ${
         column.steps
           ? `
-      <ol class="text-left text-sm text-slate-700 space-y-2 max-w-sm list-decimal list-inside">
+      <ol class="text-center text-sm text-slate-700 space-y-2 max-w-sm list-decimal list-inside">
         ${column.steps.map((step) => `<li class="leading-relaxed">${sanitizeHTML(step)}</li>`).join("")}
       </ol>
+      </div>
       `
           : ""
       }

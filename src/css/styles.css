@@ -1,6 +1,6 @@
 :root {
   --color-brand: 0 87 163;
-  --color-brand-dark: 0 40 111;
+  --color-brand-dark: 0 48 112;
   --color-brand-soft: 233 244 252;
   --color-brand-selection: 217 42 28;
   --color-ink: 15 23 42;
@@ -129,6 +129,12 @@ body {
   
   .countdown-item {
     min-width: 2.5rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .countdown-item *{
+    line-height: 1 !important;
   }
   
   .countdown-item > div:first-child {
@@ -136,9 +142,12 @@ body {
     line-height: 1.2;
   }
   
-  .countdown-strip h3 {
-    font-size: .85rem;
+  .countdown-strip h3, .countdown-item .text-2xl {
+    font-size: .85rem !important;
     line-height: 1.2;
+  }
+  .countdown-item .text-xs{
+    font-size:8px;
   }
   .countdown-strip .mx-auto{
     gap:.8rem !important;
@@ -279,20 +288,22 @@ p, span, a, button, input, textarea, select {
 /* Dark gradient overlay for mobile */
 .hero-gradient-overlay {
   background: linear-gradient(
-    to top, 
+    to bottom, 
     rgba(0, 0, 0, 0.85) 0%, 
-    rgba(0, 0, 0, 0.5) 40%, 
-    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0.5) 40%,
     transparent 100%
   );
   z-index: 5;
   pointer-events: none;
 }
-
+a.bg-brand {
+  border:1px solid rgb(var(--color-brand) / var(--tw-bg-opacity, 1));
+}
 /* Mobile - Full width overlay with dark gradient background (< 1024px) */
 @media (max-width: 1023px) {
   .h-content-wrapper{
-    justify-content: center;
+    justify-content: center !important;
+    padding:.5rem !important;
   }
   
   .hero-content-box {
@@ -318,7 +329,7 @@ p, span, a, button, input, textarea, select {
   .hero-content-inner h1 {
     font-size: 1.5rem;
     line-height: 1.3;
-    margin-top: 0.75rem;
+    margin-top: 0;
   }
   
   .hero-content-inner p:not(:first-child) {
@@ -353,6 +364,7 @@ p, span, a, button, input, textarea, select {
   .hero-overlay{
     align-items: flex-start!important;
   }
+  
 }
 @media (min-width: 1024px) and (max-width: 1284px){
     .hero-content-box{
@@ -406,7 +418,7 @@ p, span, a, button, input, textarea, select {
   
   .hero-content-box {
     width: auto;
-    max-width: 520px;
+    max-width: 505px;
     margin-left: auto;
   }
   
@@ -508,8 +520,7 @@ p, span, a, button, input, textarea, select {
 
 .hero-media {
   background-image:
-    linear-gradient(95deg, rgba(0, 48, 99, 0.1), rgba(0, 48, 99, 0.45)),
-    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1500&q=80");
+    linear-gradient(95deg, rgba(0, 48, 99, 0.1), rgba(0, 48, 99, 0.45));
   background-position: center;
   background-size: cover;
 }
@@ -702,21 +713,7 @@ p, span, a, button, input, textarea, select {
   padding-top:20px;
   padding-bottom:20px;
 }
-@media (max-width: 768px) { 
-  .benefit-card{
-    display: flex;
-    text-align: left;
-    gap: 2rem;
-    padding: 0;
-    border: none;
-  }
-  .benefit-card .item-badge{
-    display: none;
-  }
-  .benefit-card h3 .item-badge{
-    display:inline-block;
-  }
-}
+
 /* Occasions Section Styles */
 .occasions-section{
   padding-top:60px;
@@ -825,8 +822,8 @@ p, span, a, button, input, textarea, select {
   cursor: pointer;
   border: none;
   padding: 0;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background-color: #D1D5DB;
   transition: all 0.3s ease;
@@ -863,6 +860,8 @@ p, span, a, button, input, textarea, select {
 
 .delivery-card-image{
   margin: 0 1rem;
+  position: relative;
+  z-index: 2;
 }
 .delivery-card-image image {
     max-height: 300px;
@@ -875,6 +874,25 @@ p, span, a, button, input, textarea, select {
 }
 .delivery-card li span{
   color: #111111;
+}
+@media (min-width: 1024px) {
+  .delivery-card .content-wrapper{
+    position: relative;
+    height:446px;
+  }
+  .delivery-card .content-wrapper a{
+     position:absolute;
+     left:50%;
+     transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+     margin: auto;
+     top:auto;
+     bottom: 2rem;
+     width: auto;
+  }
 }
 /* eGift Tabs Section Styles */
 .egift-tabs-section .egift-tab-button {
@@ -1096,4 +1114,118 @@ footer a{
 .brand-logo-item img:hover {
   transform: scale(1.05);
   opacity: 1;
+}
+
+@media (max-width: 768px) { 
+  .delivery-card .content-wrapper{
+    height: auto;
+  }
+  .benefits-grid{
+    gap:10px;
+  }
+  .benefit-card{
+    display: flex;
+    text-align: left !important;
+    align-items: center;
+    gap: 2rem;
+    padding: .5rem 1rem !important;
+    border: none;
+  }
+  .benefit-card .w-24{
+    width: 5rem;
+  }
+  .benefit-card div{
+    margin: 0;
+  }
+
+  .benefit-card .item-badge{
+    display: none;
+  }
+  .benefit-card h3{
+    font-size: 1.25px;
+    margin: 0;
+  }
+  .benefits-grid p{
+    font-size: .85rem;
+  }
+  .benefit-card h3 .item-badge{
+    display:inline;
+  }
+  .occasions-section{
+    padding-top: 20px;
+    padding-bottom:20px;
+  }
+  .occasion-indicators{
+    display:flex !important;
+  }
+  .occasion-cards-grid{
+    margin: 0;
+  }
+  .occasions-section h2{
+    padding: 0 1rem;
+  }
+  .occasions-section .px-4{
+    padding: 0 !important;
+  }
+  .occasion-cards-grid{
+    position: relative;
+  }
+  .occasion-cards-grid p.pt-4{
+    padding-top: .5rem;
+  }
+  .delivery-section.py-16{
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .delivery-section h2.mb-10{
+    margin-bottom: 1.5rem;
+  }
+  #delivery-cards.mt-8, .space-y-3 > :not([hidden]) ~ :not([hidden]),
+  .space-y-4 > :not([hidden]) ~ :not([hidden]){
+    margin-top: 0 !important;
+  }
+  
+  .delivery-section a{
+    background-color: rgb(var(--color-brand-dark) / var(--tw-bg-opacity, 1));
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+  .egift-section, .pgift-section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .egift-tabs-section div.mt-10{
+    margin-top: 15px;
+  }
+  .egift-step-card, .physical-step-card, .physical-view-step{
+    padding: .5rem;
+    gap: 1rem;
+  }
+  .physical-step-card, .physical-step-card div.mb-2{
+    gap: 0;
+    margin: 0;
+  }
+  .physical-use-card, .physical-view-step{
+    flex-direction: row;
+    gap:10px;
+    align-items: top;
+    text-align: left;
+  }
+  .physical-use-card h3, .physical-view-step h3{
+    margin: 0;
+  }
+  .brands-strip.gap-8{
+    gap: 1.5rem;
+  }
+  .brand-logo-item .h-8{
+    height:1.5rem;
+  }
+  .faq-section .space-y-3{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .faq-section button.py-5, .faq-section button.px-5{
+    padding-top: .85rem;
+    padding-bottom: .85rem;
+  }
 }
