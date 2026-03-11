@@ -1,0 +1,291 @@
+export const landingContent = {
+  benefits: [
+    {
+      title: "Practical",
+      icon: "icon-practical.png",
+      description:
+        "Redeemable for groceries, daily essentials, and indulgences at over 200 FairPrice and Unity stores, or online.",
+    },
+    {
+      title: "Easy",
+      icon: "icon-easy.png",
+      description:
+        "Send instantly or schedule ahead. Use it in-store or online, partially or fully.",
+    },
+    {
+      title: "Meaningful",
+      icon: "icon-meaningful.png",
+      description:
+        "Bring warmth to any occasion. Choose your gift value and personalise it with your message.",
+    },
+  ],
+  occasions: [
+    {
+      id: "birthday",
+      label: "Birthday",
+      image: "birthday.png",
+      themeClass: "occasion-birthday",
+      url: "https://uatfairpricegcm.woohoo.sg/en-gb/by-occasion/birthday",
+    },
+    {
+      id: "celebration",
+      label: "Celebrations",
+      image: "celebration.png",
+      themeClass: "occasion-celebration",
+      url: "https://uatfairpricegcm.woohoo.sg/en-gb/by-occasion/celebrations",
+    },
+    {
+      id: "gratitude",
+      label: "Gratitude",
+      image: "gratitude.png",
+      themeClass: "occasion-gratitude",
+      url: "https://uatfairpricegcm.woohoo.sg/en-gb/by-occasion/gratitude",
+    },
+    {
+      id: "thinking-of-you",
+      label: "Thinking of you",
+      image: "thinking-of-you.png",
+      themeClass: "occasion-thinking",
+      url: "https://uatfairpricegcm.woohoo.sg/en-gb/by-occasion/thinking-of-you",
+    },
+    {
+      id: "more",
+      label: "And more",
+      image: "and-more.png",
+      themeClass: "occasion-more",
+      url: "https://uatfairpricegcm.woohoo.sg/en-gb/by-occasion/and-more",
+    },
+  ],
+  deliveryCards: [
+    {
+      title: "eGift Cards",
+      description: "Best for speed and convenience",
+      image: "eGiftCards.png",
+      themeClass: "delivery-egift",
+      bullets: [
+        "Instant/scheduled delivery via Email",
+        "Personal or bulk sending",
+        "The thoughtful gift for every need, from a simple thank you to major milestones and celebrations",
+      ],
+      action: "Send eGift card",
+      url:"https://uatfairpricegcm.woohoo.sg/"
+    },
+    {
+      title: "Physical Gift Cards",
+      description: "Best for in-person moments",
+      image: "pGiftCards.png",
+      themeClass: "delivery-physical",
+      bullets: [
+        "Available for in-store collection (personal gifting) or bulk delivery (corporate gifting)",
+        "Bulk delivery requires a minimum spend and 5-7 working days lead time",
+        "Great for everything from birthday gifts to corporate employee benefits",
+      ],
+      action: "Find a store",
+      url:"https://www.fairprice.com.sg/store-locator"
+    },
+  ],
+  eGiftTabs: [
+    {
+      id: "egift-order",
+      label: "How to order",
+      steps: [
+        {
+          step: "1",
+          title: "Select Design",
+          description: "Pick from a wide range of designs made for every occasion.",
+          image: "egift-step1.png",
+        },
+        {
+          step: "2",
+          title: "Personalise",
+          description: "Choose the gift value, quantity and a personal message to make it special.",
+          image: "egift-step2.png",
+        },
+        {
+          step: "3",
+          title: "Pay and send",
+          description: "Create your order with major credit cards or PayNow. Your eGift Card is delivered instantly or on your chosen date.",
+          image: "egift-step3.png",
+        },
+      ],
+    },
+    {
+      id: "egift-use",
+      label: "How to use",
+      steps: [
+        {
+          step: "1",
+          title: "Check email",
+          description: "You or your recipient will receive an email providing details of your unique ‘eGift Card’.",
+          image: "egift-use-step1.png",
+        },
+        {
+          step: "2",
+          title: "View eGift card",
+          description: "Tap ‘View eGift Card’ for immediate use in-store or online.",
+          image: "egift-use-step2.png",
+        },
+        {
+          step: "3",
+          title: "Save it for later",
+          description: "Add the eGift Card to your FairPrice Group app for future use.",
+          image: "egift-use-step3.png",
+        },
+      ],
+    },
+    {
+      id: "egift-view",
+      label: "How to view",
+      steps: [
+        {
+          step: "1",
+          title: "Open app & go to Account",
+          description: "Tap the ‘Account’ icon on the top-left corner.",
+          image: "egift-view-step1.png",
+        },
+        {
+          step: "2",
+          title: "Select ‘Vouchers’",
+          description: "Tap ‘Vouchers’ on your Account page.",
+          image: "egift-view-step2.png",
+        },
+        {
+          step: "3",
+          title: "View balance",
+          description: "Tap ‘eGift Cards’ tab to see your balance and transaction history.",
+          image: "egift-view-step3.png",
+        },
+      ],
+    },
+  ],
+  physicalTabs: [
+    {
+      id: "physical-order",
+      label: "How to order",
+      columns: [
+        {
+          title: "Personal orders",
+          icon: "store",
+          iconImage: "icon-store.png",
+          steps: [
+            "Visit any FairPrice cashier or customer service counter",
+            "Choose your card design and value ($5, $10, $20 or $50)",
+            "Make payment and collect on the spot",
+          ],
+          buttonText: "Locate us",
+          buttonLink: "https://www.fairprice.com.sg/store-locator",
+        },
+        {
+          title: "Corporate orders",
+          icon: "building",
+          iconImage: "icon-briefcase.png",
+          steps: [
+            'Submit your request via <a href="#" target="_blank" class="text-brand hover:underline font-semibold">the online pre-order portal</a>. Our team will respond within 2-3 working days',
+            "Pay via credit card or bank transfer",
+            "Arrange collection or delivery (min. spend applies)",
+          ],
+          buttonText: "Gift cards pre-order",
+          buttonLink: "https://uatfairpricecorp.woohoo.sg/",
+        },
+      ],
+    },
+    {
+      id: "physical-use",
+      label: "How to use",
+      type: "two-column-image",
+      columns: [
+        {
+          title: "In stores",
+          iconImage: "physical-use-instore.png",
+          description: "Scan gift card barcode at the cashier or self-checkout",
+        },
+        {
+          title: "For digital payments",
+          iconImage: "physical-use-digital.png",
+          description: "Add gift card to your FairPrice Group app:",
+          steps: [
+            "Scratch foil on the back of gift card to show barcode",
+            "On the app, tap 'Scan' and scan the barcode",
+            "The gift card will be added into Vouchers",
+          ],
+        },
+      ],
+    },
+    {
+      id: "physical-view",
+      label: "How to view",
+      type: "three-steps",
+      steps: [
+        {
+          step: "1",
+          title: 'Visit <a href="#" target="_blank" class="text-brand hover:underline font-semibold">here</a> to view the gift card validity',
+          image: "physical-view-step1.png",
+        },
+        {
+          step: "2",
+          title: "Key in your 16-digit card number located at the back of your gift card",
+          image: "physical-view-step2.png",
+        },
+        {
+          step: "3",
+          title: "Tap 'Check Balance' to view your balance",
+          image: "physical-view-step3.png",
+        },
+      ],
+    },
+  ],
+  brands: [
+    {
+      name: "FairPrice",
+      logo: "logo-fairprice.png",
+      alt: "FairPrice Logo"
+    },
+    {
+      name: "FairPrice Finest",
+      logo: "logo-fairprice-finest.png",
+      alt: "FairPrice Finest Logo"
+    },
+    {
+      name: "FairPrice Xtra",
+      logo: "logo-fairprice-xtra.png",
+      alt: "FairPrice Xtra Logo"
+    },
+    {
+      name: "FairPrice Shop",
+      logo: "logo-fairprice-shop.png",
+      alt: "FairPrice Shop Logo"
+    },
+    {
+      name: "Unity",
+      logo: "logo-unity.png",
+      alt: "Unity Logo"
+    },
+  ],
+  faq: [
+    {
+      question: "What are FairPrice Group eGift Cards?",
+      answer:
+        "They are digital value cards that make gifting easy and meaningful. Your recipient can use them across FairPrice stores*, online at FairPrice, and Unity pharmacies, choosing what they truly need or want. It's a simple, thoughtful way to give something practical for any occasion. *Except FairPrice Xpress",
+    },
+    {
+      question: "Where can I buy FairPrice Group eGift Cards?",
+      answer:
+        "You can buy them online. Choose 'Personal' if you are buying one for yourself or as a gift, or 'Corporate' if you are purchasing in bulk or on behalf of your company.",
+    },
+    {
+      question: "What are the available payment methods for purchasing eGift Cards?",
+      answer:
+        "We accept payments via credit/debit cards and PayNow. For corporate orders, bank transfer is also available.",
+    },
+    {
+      question: "How will my recipient receive their eGift Card?",
+      answer:
+        "<strong>For personal eGift cards:</strong> Your recipient will receive an email containing their eGift Card and your personalised message once your payment is confirmed. <strong>For corporate eGift cards:</strong> You will receive a downloadable Excel or CSV file with the eGift Card links, ready for you to share with your team or clients. To redeem, simply scan the QR code for in-store use or enter the eGift Card code from your eGift Card link during online checkout. <br/> Pro tip: Save your eGift Card in the FairPrice Group app for easy access and seamless redemption.",
+    },
+    {
+      question: "How do I check my eGift Card balance?",
+      answer:
+        "Tap the eGift Card link in your email to view your balance. If you have saved it to your FairPrice Group app, you can find it under 'Vouchers' > select 'eGift Cards'.",
+    },
+  ],
+}

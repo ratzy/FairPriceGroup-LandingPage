@@ -1121,7 +1121,7 @@ footer a{
     height: auto;
   }
   .benefits-grid{
-    gap:10px;
+    gap:10px !important;
   }
   .benefit-card{
     display: flex;
@@ -1131,11 +1131,23 @@ footer a{
     padding: .5rem 1rem !important;
     border: none;
   }
+   .benefit-card:nth-child(2){
+    gap:.6rem;
+   }
+   .benefit-card:last-child{
+    gap:1.25rem;
+   }
+  .benefit-card:nth-child(2) img{
+    width:3.5rem;
+  }
   .benefit-card .w-24{
-    width: 5rem;
+    width: 4.5rem;
+    height: auto !important;
+    justify-content: left;
   }
   .benefit-card div{
     margin: 0;
+    height: auto !important;
   }
 
   .benefit-card .item-badge{
