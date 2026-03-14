@@ -40,7 +40,7 @@ export class HeroCarousel {
             <div class="hero-content-inner p-6 pb-20 text-white md:p-8 xl:p-12 xl:m-8 xl:bg-brand xl:rounded-2xl xl:shadow-2xl">
             
               <!-- Main Heading -->
-              <h1 class="mt-2 text-2xl font-bold leading-tight text-white md:text-3xl xl:text-4xl xl:leading-snug">
+              <h1 class="text-2xl font-bold leading-tight text-white md:text-3xl xl:text-4xl xl:leading-snug">
                 Everyday gifting,<br />made a little better
               </h1>
               
@@ -52,13 +52,13 @@ export class HeroCarousel {
               <!-- CTA Buttons -->
               <div class="mt-5 hero-action-wrapper flex flex-row gap-3 sm:flex-row xl:mt-6">
                 <a href="https://uatfairpricegcm.woohoo.sg/" target="_blank"
-                  class="inline-block bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                  class="btn-p inline-block bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:bg-slate-100 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#egift'"
                 >
                   Send Personal eGift
                 </a>
                 <a href="https://uatfairpricecorp.woohoo.sg/" target="_blank"
-                  class="inline-block border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
+                  class="btn-s inline-block border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand"
                   onclick="window.location.href='#corporate-cards'"
                 >
                   Corporate Gifting

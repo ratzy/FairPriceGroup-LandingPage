@@ -55,7 +55,7 @@ export function renderBenefits(target, benefits) {
   target.innerHTML = benefits
     .map(
       (benefit, index) => `
-      <article class="benefit-card relative rounded-2xl border border-brand-dark/10 bg-white px-6 py-8 text-center transition-all hover:border-brand/30 hover:shadow-lg">
+      <article class="benefit-card relative rounded-2xl border border-brand-dark/10 bg-white px-6 py-6 text-center transition-all hover:border-brand/30 hover:shadow-lg">
         <!-- Number Badge -->
           <span class="item-badge flex h-8 w-8 items-center justify-center text-base font-bold">
             ${index + 1}
@@ -177,7 +177,7 @@ export function renderDeliveryCards(target, cards) {
           
           <a href='${escapeHTML(card.url)}'
             type="button" target="_blank"
-            class="inline-block mt-8 border border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
+            class="btn-s inline-block mt-8 border border-brand-dark px-6 py-2.5 text-sm font-semibold text-brand-dark transition hover:bg-brand-dark hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
           >
             ${escapeHTML(card.action)}
           </a>
@@ -309,7 +309,7 @@ function renderPhysicalColumn(column, tabType) {
             ? `
         <a 
           href="${escapeHTML(column.buttonLink || "#")}"
-          target="_blank" class="border border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+          target="_blank" class="btn-s border border-brand px-6 py-2.5 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
         >
           ${escapeHTML(column.buttonText)}
         </a>
@@ -498,7 +498,7 @@ export function renderFaq(target, items) {
                   aria-expanded="false"
                   class="faq-trigger flex w-full items-center gap-3 border-b border-transparent px-5 py-5 text-left text-sm font-semibold text-slate-800 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset"
                 >
-                <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand">></span>
+                <span aria-hidden="true" class="faq-icon text-lg font-bold leading-none text-brand"></span>
                   <span>${escapeHTML(item.question)}</span>
                 </button>
               </h3>

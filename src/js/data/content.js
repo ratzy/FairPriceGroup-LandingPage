@@ -280,7 +280,7 @@ export const landingContent = {
     {
       question: "How will my recipient receive their eGift Card?",
       answer:
-        "<strong>For personal eGift cards:</strong> Your recipient will receive an email containing their eGift Card and your personalised message once your payment is confirmed. <strong>For corporate eGift cards:</strong> You will receive a downloadable Excel or CSV file with the eGift Card links, ready for you to share with your team or clients. To redeem, simply scan the QR code for in-store use or enter the eGift Card code from your eGift Card link during online checkout. <br/> Pro tip: Save your eGift Card in the FairPrice Group app for easy access and seamless redemption.",
+        "For personal eGift cards: Your recipient will receive an email containing their eGift Card and your personalised message once your payment is confirmed. For corporate eGift cards: You will receive a downloadable Excel or CSV file with the eGift Card links, ready for you to share with your team or clients. To redeem, simply scan the QR code for in-store use or enter the eGift Card code from your eGift Card link during online checkout. Pro tip: Save your eGift Card in the FairPrice Group app for easy access and seamless redemption.",
     },
     {
       question: "How do I check my eGift Card balance?",

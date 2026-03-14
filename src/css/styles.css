@@ -1,5 +1,5 @@
 :root {
-  --color-brand: 0 87 163;
+  --color-brand: 0 48 114;
   --color-brand-dark: 0 48 112;
   --color-brand-soft: 233 244 252;
   --color-brand-selection: 217 42 28;
@@ -14,7 +14,7 @@
   /* Typography */
 
     --font-primary: "Museo", sans-serif;
-    --font-light: 300;
+    --font-light: 400;
     --font-medium: 500;
     --font-bold: 700;
 }
@@ -66,9 +66,10 @@ body {
 .mt-6{
   margin-top:1.25rem !important;
 }
-.text-brand-dark{
- color: #0A405A;
+.text-brand-dark, h2:not(.text-white){
+ color: #0A405A !important;
 }
+
 /* Marquee Strip */
 .marquee-strip {
   position: relative;
@@ -187,7 +188,7 @@ p, span, a, button, input, textarea, select {
   border-color:#003070 !important;
 }
 .text-brand{
-  color: #003070 !important;
+  color: #003070;
 }
 
 /* Hero Carousel Styles */
@@ -283,6 +284,9 @@ p, span, a, button, input, textarea, select {
 .hero-content-inner {
   background-color: #003071 !important;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.hero-content-inner .text-2xl{
+  font-size: 1.75rem;
 }
 
 /* Dark gradient overlay for mobile */
@@ -675,6 +679,9 @@ a.bg-brand {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+.faq-section .accordion-panel{
+  font-weight: 400;
+}
 
 .faq-trigger[aria-expanded="true"] {
   border-color: rgb(var(--color-brand));
@@ -874,6 +881,7 @@ a.bg-brand {
 }
 .delivery-card li span{
   color: #111111;
+  font-weight: 400;
 }
 @media (min-width: 1024px) {
   .delivery-card .content-wrapper{
@@ -939,10 +947,8 @@ a.bg-brand {
 }
 .egift-step-card p, .physical-step-card span{
   color:#111111;
+  font-weight: 400;
 }
-
-
-
 .step-badge {
   background-color: rgb(var(--color-brand-dark));
   color: white;
@@ -1115,6 +1121,13 @@ footer a{
   transform: scale(1.05);
   opacity: 1;
 }
+.faq-icon{
+  display: inline-block;
+  width:10px;
+  height: 13px;
+  background-image: url(../assets/images/accordion-arrow.png);
+  background-repeat: none;
+}
 
 @media (max-width: 768px) { 
   .delivery-card .content-wrapper{
@@ -1197,9 +1210,10 @@ footer a{
     margin-top: 0 !important;
   }
   
-  .delivery-section a{
+
+  .delivery-section a.btn-s{
     background-color: rgb(var(--color-brand-dark) / var(--tw-bg-opacity, 1));
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
   }
   .egift-section, .pgift-section{
     padding-top: 40px;
@@ -1240,4 +1254,13 @@ footer a{
     padding-top: .85rem;
     padding-bottom: .85rem;
   }
+}
+
+.btn-p:hover, .btn-s:hover{
+  font-weight: 700 !important;
+}
+
+a.hover\:bg-brand:hover, .btn-s:hover{
+  background-color: #fff;
+  color: #003070;
 }
